@@ -1,0 +1,531 @@
+/* ============================================================
+   COURSES SECTION — ORIGINAL WITH ENHANCED ANIMATIONS
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+  --e--global-color-main: #38bdf8;
+}
+
+/* Header Section Container */
+.text-center {
+  text-align: center;
+}
+
+/* About Title - Badge Style */
+.about_title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 8px 24px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: pulse 2s infinite;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-badge-icon {
+  font-size: 14px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(56, 189, 248, 0);
+  }
+}
+
+/* About Sub - Main Heading */
+.about_sub {
+  margin-bottom: 22px;
+  text-transform: capitalize;
+  color: #ffffff;
+  font-size: 40px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  line-height: 50px;
+  animation: custom-anim-top 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+@keyframes custom-anim-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Corner Decorations for about_sub */
+.about_sub::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  width: 30px;
+  height: 30px;
+  border-top: 3px solid var(--e--global-color-main);
+  border-left: 3px solid var(--e--global-color-main);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.about_sub:hover::before {
+  opacity: 1;
+  top: -15px;
+  left: -25px;
+}
+
+.about_sub::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: -20px;
+  width: 30px;
+  height: 30px;
+  border-bottom: 3px solid var(--e--global-color-main);
+  border-right: 3px solid var(--e--global-color-main);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.about_sub:hover::after {
+  opacity: 1;
+  bottom: -15px;
+  right: -25px;
+}
+
+/* Excel - Exclamation Mark */
+.excel {
+  color: var(--e--global-color-main) !important;
+  display: inline-block;
+  animation: excelPulse 1.5s infinite;
+}
+
+@keyframes excelPulse {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 0px var(--e--global-color-main);
+  }
+  50% {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px var(--e--global-color-main);
+  }
+}
+
+/* Main Courses Container */
+.courses_main {
+  background-image: url("/img/courses-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 60px;
+  background-size: 100% 100%;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Course Card */
+.course_card {
+  text-align: center;
+  border-radius: 40px;
+  background: #0F1C23;
+  padding: 35px;
+  max-width: 575px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  animation: slideInLeft 0.6s ease backwards;
+}
+
+.course_card:nth-child(odd) {
+  animation: slideInLeft 0.6s ease backwards;
+}
+
+.course_card:nth-child(even) {
+  animation: slideInRight 0.6s ease backwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Card Hover Animation */
+.course_card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--e--global-color-main);
+}
+
+/* Card Glow Effect on Hover */
+.course_card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.15), transparent);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.course_card:hover::before {
+  left: 100%;
+}
+
+/* Card Corner Effects */
+.course_card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, var(--e--global-color-main) 0%, transparent 70%);
+  opacity: 0;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.course_card:hover::after {
+  opacity: 0.15;
+  width: 100px;
+  height: 100px;
+}
+
+/* Image Wrapper */
+.course_img_wrapper {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+/* Image Styling with Animation */
+.course_img {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 0 0px var(--e--global-color-main));
+}
+
+/* Image Hover Animation */
+.course_card:hover .course_img {
+  transform: scale(1.15) rotate(10deg);
+  filter: drop-shadow(0 0 10px var(--e--global-color-main));
+}
+
+/* Image Overlay */
+.course_img_overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: rgba(56, 189, 248, 0.8);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.course_card:hover .course_img_overlay {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.course_img_overlay span {
+  font-size: 20px;
+  animation: rotate 0.5s ease;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Course Name */
+.course_name {
+  font-family: "Rajdhani", sans-serif;
+  color: #ffffff;
+  text-transform: none;
+  font-weight: 700;
+  font-size: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/* Name Underline Animation */
+.course_name::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--e--global-color-main), #ffffff);
+  transition: width 0.4s ease;
+}
+
+.course_card:hover .course_name::after {
+  width: 80%;
+}
+
+/* Name Hover Effect */
+.course_card:hover .course_name {
+  background: linear-gradient(135deg, #ffffff, var(--e--global-color-main));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 1px;
+}
+
+/* Course Content */
+.course_content {
+  line-height: 1.75;
+  font-family: "Rajdhani", sans-serif;
+  color: #969EB2;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+
+/* Content Hover Effect */
+.course_card:hover .course_content {
+  color: #c8d4e8;
+  transform: translateY(-2px);
+}
+
+/* Button Wrapper */
+.course_btn_wrapper {
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+.course_card:hover .course_btn_wrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button Styling */
+.course_btn {
+  background: transparent;
+  border: 2px solid var(--e--global-color-main);
+  border-radius: 40px;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--e--global-color-main);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.course_btn:hover {
+  background: var(--e--global-color-main);
+  color: #000;
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
+}
+
+/* Fill Div */
+.fill_div {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+/* Empty Div */
+.empty_div {
+  height: 100%;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .empty_div {
+    display: none;
+  }
+  .fill_div {
+    padding: 10px;
+    background: none !important;
+  }
+  
+  .course_card {
+    padding: 25px 20px;
+  }
+  
+  .course_name {
+    font-size: 24px;
+  }
+  
+  .course_content {
+    font-size: 14px;
+  }
+  
+  .course_img {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .about_sub {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+  
+  .about_title {
+    font-size: 12px;
+    padding: 6px 18px;
+  }
+  
+  .course_btn_wrapper {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .course_card {
+    padding: 20px 15px;
+  }
+  
+  .course_name {
+    font-size: 20px;
+  }
+  
+  .course_content {
+    font-size: 13px;
+  }
+  
+  .course_img {
+    height: 45px;
+    width: 45px;
+  }
+  
+  .about_sub {
+    font-size: 24px;
+  }
+  
+  .about_title {
+    font-size: 10px;
+    padding: 5px 14px;
+  }
+  
+  .about-badge-icon {
+    font-size: 12px;
+  }
+  
+  .course_btn {
+    padding: 6px 18px;
+    font-size: 12px;
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  .course_card,
+  .course_img,
+  .course_name,
+  .course_content,
+  .course_btn_wrapper,
+  .about_title::after,
+  .about_sub::before,
+  .about_sub::after {
+    transition: none;
+    animation: none;
+  }
+  
+  .course_card::before,
+  .course_card::after {
+    display: none;
+  }
+  
+  .course_card:hover {
+    transform: none;
+  }
+  
+  .course_card:hover .course_img {
+    transform: none;
+  }
+  
+  .excel {
+    animation: none;
+  }
+  
+  .about-badge-icon {
+    animation: none;
+  }
+  
+  .about_title {
+    animation: none;
+  }
+}

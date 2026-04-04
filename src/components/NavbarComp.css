@@ -1,0 +1,331 @@
+/* ============================================================
+   PERFECT NAVBAR - Clean & Professional
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
+/* ═══════════════════════════════════════════
+   VARIABLES
+═══════════════════════════════════════════ */
+:root {
+  --nav-bg-scroll: rgba(6, 8, 15, 0.96);
+  --nav-accent: #00c8ff;
+  --nav-accent-glow: rgba(0, 200, 255, 0.18);
+  --nav-text: #e2e8f0;
+  --nav-text-muted: #94a3b8;
+  --nav-hover: #00c8ff;
+  --nav-dropdown-bg: #080c14;
+  --nav-height: 72px;
+}
+
+/* ═══════════════════════════════════════════
+   BODY OFFSET
+═══════════════════════════════════════════ */
+body {
+  padding-top: var(--nav-height);
+}
+
+/* ═══════════════════════════════════════════
+   NAVBAR BASE
+═══════════════════════════════════════════ */
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 0;
+  height: var(--nav-height);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* scrolled state */
+.custom-navbar.scrolled {
+  background: var(--nav-bg-scroll);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 200, 255, 0.12);
+  box-shadow: 0 1px 0 rgba(0, 200, 255, 0.08), 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* hide on scroll down */
+.custom-navbar.navbar-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* ═══════════════════════════════════════════
+   LOGO
+═══════════════════════════════════════════ */
+.custom-navbar .navbar-brand img {
+  height: 42px;
+  width: auto;
+  filter: drop-shadow(0 0 8px rgba(0, 200, 255, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.custom-navbar .navbar-brand:hover img {
+  filter: drop-shadow(0 0 14px rgba(0, 200, 255, 0.6));
+}
+
+/* ═══════════════════════════════════════════
+   NAV LINKS
+═══════════════════════════════════════════ */
+.nav_text {
+  color: var(--nav-text) !important;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.25s ease;
+}
+
+/* underline slide-in on hover */
+.nav_text::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--nav-accent);
+  box-shadow: 0 0 8px var(--nav-accent);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav_text:hover,
+.nav_text:focus,
+.nav_text:active {
+  color: var(--nav-accent) !important;
+}
+
+.nav_text:hover::after {
+  width: 100%;
+}
+
+/* ═══════════════════════════════════════════
+   NAV LINKS WRAPPER
+═══════════════════════════════════════════ */
+.custom-navbar .navbar-nav {
+  align-items: center;
+  gap: 6px;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+  padding: 6px 12px !important;
+}
+
+/* ═══════════════════════════════════════════
+   DROPDOWN TOGGLE ARROW
+═══════════════════════════════════════════ */
+.navbar .dropdown-toggle::after {
+  border-top: 0.32em solid var(--nav-text) !important;
+  border-right: 0.32em solid transparent !important;
+  border-left: 0.32em solid transparent !important;
+  vertical-align: middle;
+  margin-left: 5px;
+  transition: all 0.25s ease;
+}
+
+.navbar .dropdown-toggle:hover::after,
+.navbar .show > .dropdown-toggle::after {
+  border-top-color: var(--nav-accent) !important;
+  transform: rotate(180deg);
+}
+
+/* ═══════════════════════════════════════════
+   DROPDOWN MENU
+═══════════════════════════════════════════ */
+.navbar .dropdown-menu {
+  background: var(--nav-dropdown-bg) !important;
+  border: 1px solid rgba(0, 200, 255, 0.15) !important;
+  border-radius: 12px !important;
+  padding: 8px 0 !important;
+  margin-top: 8px !important;
+  min-width: 260px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 200, 255, 0.05) !important;
+  animation: dropFade 0.2s ease forwards;
+}
+
+@keyframes dropFade {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  color: var(--nav-text) !important;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px !important;
+  transition: all 0.2s ease;
+  border-left: 2px solid transparent;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  background: rgba(0, 200, 255, 0.08) !important;
+  color: var(--nav-accent) !important;
+  padding-left: 26px !important;
+  border-left-color: var(--nav-accent);
+}
+
+/* ═══════════════════════════════════════════
+   NAVBAR TOGGLER (hamburger)
+═══════════════════════════════════════════ */
+.custom-navbar .navbar-toggler {
+  border: 1px solid rgba(0, 200, 255, 0.3);
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: rgba(0, 200, 255, 0.06);
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-toggler:hover {
+  background: rgba(0, 200, 255, 0.15);
+  border-color: rgba(0, 200, 255, 0.6);
+}
+
+.custom-navbar .navbar-toggler-icon {
+  filter: invert(1) sepia(1) saturate(2) hue-rotate(170deg);
+}
+
+/* ═══════════════════════════════════════════
+   JOIN NOW BUTTON
+═══════════════════════════════════════════ */
+.custom-navbar .btn-primary {
+  background: linear-gradient(135deg, #00c8ff, #0084aa);
+  border: none;
+  padding: 8px 24px;
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 200, 255, 0.4);
+}
+
+/* ═══════════════════════════════════════════
+   MOBILE RESPONSIVE (≤ 992px)
+═══════════════════════════════════════════ */
+@media (max-width: 992px) {
+  .custom-navbar.scrolled {
+    background: rgba(6, 8, 15, 0.95);
+  }
+
+  /* Collapse Panel */
+  .custom-navbar .navbar-collapse {
+    background: linear-gradient(160deg, rgba(6, 10, 22, 0.98), rgba(8, 14, 28, 0.98));
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 200, 255, 0.14);
+    border-top: 2px solid rgba(0, 200, 255, 0.35);
+    border-radius: 0 0 16px 16px;
+    margin-top: 12px;
+    padding: 20px 16px 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Nav links vertical */
+  .custom-navbar .navbar-nav {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .custom-navbar .navbar-nav .nav-link {
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  .custom-navbar .navbar-nav .nav-link .nav_text {
+    display: block;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+
+  .custom-navbar .navbar-nav .nav-link:hover .nav_text {
+    background: rgba(0, 200, 255, 0.08);
+    border-color: rgba(0, 200, 255, 0.2);
+    transform: translateX(5px);
+  }
+
+  .nav_text::after {
+    display: none;
+  }
+
+  /* Dropdown on mobile */
+  .custom-navbar .navbar-nav > div {
+    width: 100%;
+  }
+
+  .custom-navbar .dropdown-toggle {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 10px !important;
+    padding: 12px 16px !important;
+  }
+
+  .custom-navbar .dropdown-toggle .nav_text {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    text-align: left;
+  }
+
+  .custom-navbar .dropdown-menu {
+    position: static !important;
+    width: 100% !important;
+    margin-top: 8px !important;
+    background: rgba(4, 8, 18, 0.95) !important;
+    border-left: 2px solid var(--nav-accent) !important;
+  }
+
+  /* Join button on mobile */
+  .custom-navbar .navbar-collapse > .btn-primary {
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   SMALL MOBILE (≤ 480px)
+═══════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .custom-navbar .navbar-brand img {
+    height: 36px;
+  }
+  
+  .nav_text {
+    font-size: 13px;
+  }
+  
+  .custom-navbar .navbar-collapse {
+    padding: 16px 12px 20px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   REDUCED MOTION
+═══════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

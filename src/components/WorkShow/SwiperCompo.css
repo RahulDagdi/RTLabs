@@ -1,0 +1,130 @@
+.workshow-container {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    /* transition: transform 0.3s ease-in-out; */
+    
+  }
+  
+  .th-video {
+    position: relative;
+    /* overflow: hidden; */
+    border-radius: 10px;
+   }
+  
+  .play-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 24px;
+    background: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    color:var(--e--global-color-main) !important;
+  }
+
+  .play-btn .arrow{
+    color: var(--e--global-color-main);
+    font-weight: 700;
+  }
+  
+  .play-btn:hover {
+    background-color: var(--e--global-color-main);
+     
+
+    .arrow{
+      color:#ffffff;
+    }
+  }
+  
+  .video-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0F1C23 !important;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .video-modal {
+    position: relative;
+    background: #0F1C23 !important;
+    padding: 20px;
+    max-width: 90%;
+    border-radius: 10px;
+  }
+  
+  .modal-video-player {
+    width: 100%;
+    max-height: 80vh;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+  .swiper-3d {
+    perspective:none !important;
+  }
+
+  .play-btn{
+    display: none !important;
+  }
+
+   
+   
+  /* Style the middle active slide */
+.swiper-slide-active {
+  
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 3;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+   
+
+  .play-btn{
+    display: flex !important;
+  }
+}
+
+/* Ensure inner video/image fits perfectly */
+.swiper-slide-active video, .swiper-slide-active iframe,
+.swiper-slide-active img {
+  object-fit: cover;
+   
+  border-radius: 12px;
+   
+  border: 3px solid var(--e--global-color-main);
+
+  transform: scale(2.1);
+  
+  }
+
+
+   
+
+/* Optional: dim the non-active slides for contrast */
+.swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.7;
+  transform: scale(0.95);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  
+}

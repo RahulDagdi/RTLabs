@@ -1,0 +1,218 @@
+.hero-cta-inner {
+    position: relative;
+     
+    background-image: url("/img/hero-bg-shape.png");
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    background-position: center;
+   }
+
+
+   @media screen  and (max-width: 1046px) {
+    .hero-cta-inner {
+      background-image: none;
+    }
+   }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-shape-area {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .hero-img1,
+  .hero-img2 {
+    width: 40%;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .hero-img1 {
+    animation: slideinleft 1s ease-out forwards;
+  }
+  
+  .hero-img2 {
+    animation: slideinright 1s ease-out forwards;
+  }
+  
+  .sec-title {
+     
+    animation: custom-anim-top 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1);
+    
+  text-transform: capitalize;
+  color: #FFFFFF !important;
+  font-size: 44px;
+   font-weight: 700;
+  font-family: "Rajdhani", sans-serif;
+  
+  }
+  
+  .desc {
+     /* margin-bottom: 30px; */
+ 
+    visibility: visible;
+  animation-duration: 1.3s;
+  animation-delay: 0.2s;
+  animation-name: custom-anim-top;
+  animation: custom-anim-top 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1);
+  font-family: "Rajdhani", sans-serif;
+  color: var(--body-color);
+  line-height: 1.75;
+
+    
+  }
+  
+  @keyframes slideinleft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideinright {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .custom-anim-top {
+    animation: fadeInUp 1.3s ease-in-out;
+  }
+/*   
+  .btn-group {
+    margin-top: 30px;
+  } */
+   
+  .explore-button2
+ {
+  
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+    text-align: center;
+   /* border:1px var(--e--global-color-main) solid;  */
+   border-top:1px var(--e--global-color-main) solid; 
+   border-bottom:1px var(--e--global-color-main) solid; 
+    
+  background-color: none !important;
+  color: white;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 12px 15px;
+  min-width: 180px;
+  border-radius: 0px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 50%, calc(100% - 15px) 100%, 15px 100%, 0% 50%);
+  transition: 0.2s;
+  box-sizing: border-box;
+  
+}
+
+.explore-button2:hover{
+  
+   border-color: white;
+   color:var(--e--global-color-main)
+
+}
+ 
+.swiper-pagination-bullet {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: var(--e--global-color-main);
+    margin: 0 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--e--global-color-main);  /* Active color */
+    
+    border: 1.5px solid white;
+}
+ 
+.new_circle{
+   
+  height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    border:1px solid var(--e--global-color-main);
+    display: flex;
+    justify-content: center;
+   
+    align-items: center;
+
+}
+
+
+
+.slider-pagination {
+    display: inline-block;
+  
+}
+
+.slider-pagination span {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1000px) {
+  .sec-title{
+    font-size: 20px;
+  }
+  
+}
+
+@media screen  and (max-width:600px){
+  .slider-image{
+    width: 120px;
+  }
+  
+}
+@media screen  and (max-width:600px){
+  .slider-image{
+    width: 90px;
+  }
+  
+}
+
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 100%;
+    }
+}

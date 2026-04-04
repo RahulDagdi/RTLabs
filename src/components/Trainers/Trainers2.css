@@ -1,0 +1,490 @@
+/* ============================================================
+   TRAINERS SECTION — PLabs Dark Theme
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+  --tr-primary: #38bdf8;
+  --tr-secondary: #22d3ee;
+  --tr-accent: #84cc16;
+  --tr-bg-dark: #020617;
+  --tr-bg-card: #0b1326;
+  --tr-text: #f1f5f9;
+  --tr-text-muted: #94a3b8;
+  --tr-border: rgba(56, 189, 248, 0.15);
+  --tr-transition: all 0.4s ease-in-out;
+}
+
+/* Section Styles */
+.trainers-section {
+  position: relative;
+  padding: 80px 24px;
+  /* background: linear-gradient(180deg, #020617 0%, #0b1326 50%, #020617 100%); */
+  font-family: 'Rajdhani', sans-serif;
+  overflow: hidden;
+}
+
+/* Ambient Glow Effects */
+.trainers-ambient {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.trainers-ambient--1 {
+  width: 600px;
+  height: 600px;
+  top: -200px;
+  left: -200px;
+  /* background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%); */
+}
+
+.trainers-ambient--2 {
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+  right: -150px;
+  /* background: radial-gradient(circle, rgba(34, 211, 238, 0.06) 0%, transparent 70%); */
+}
+
+/* Container */
+.trainers-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.trainers-header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeInDown 0.6s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.trainers-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid var(--tr-border);
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(56, 189, 248, 0);
+  }
+}
+
+.trainers-badge-icon {
+  font-size: 14px;
+}
+
+.trainers-badge span:last-child {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tr-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.trainers-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  color: var(--tr-text);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.trainers-highlight {
+  background: linear-gradient(135deg, var(--tr-primary), var(--tr-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.trainers-subtitle {
+  font-size: clamp(14px, 3vw, 16px);
+  color: var(--tr-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Carousel Wrapper */
+.trainers-carousel-wrapper {
+  position: relative;
+  margin: 0 -10px;
+}
+
+.trainers-carousel {
+  padding: 20px 0 40px;
+}
+
+/* Carousel Item */
+.trainers-carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+/* Team Card - Original Style */
+.trainers-team-card {
+  text-align: center;
+  border: double 2px transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(rgb(15, 28, 35), rgb(15, 28, 35)), 
+                    linear-gradient(to right, rgb(69, 248, 130), rgb(255, 190, 24));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  position: relative;
+  transition: var(--tr-transition);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.trainers-team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 40px rgba(56, 189, 248, 0.2);
+}
+
+/* Card Corners */
+.trainers-card-corner {
+  position: absolute;
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  z-index: 1;
+}
+
+.trainers-corner1 {
+  left: 0;
+  top: 0;
+  border-top: solid 17px #45F882;
+  border-left: solid 17px #45F882;
+  border-right: solid 17px transparent;
+  border-bottom: solid 17px transparent;
+  border-radius: 8px 0 0 0;
+}
+
+.trainers-corner2 {
+  right: 0;
+  left: auto;
+  border-right: solid 17px #FFBE18;
+  border-left: solid 17px transparent;
+  border-top: solid 17px #FFBE18;
+  border-radius: 0 8px 0 0;
+}
+
+.trainers-corner3 {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  border-left: solid 17px #45F882;
+  border-bottom: solid 17px #45F882;
+  border-right: solid 17px transparent;
+  border-top: solid 17px transparent;
+  border-radius: 0 0 0 8px;
+}
+
+.trainers-corner4 {
+  right: 0;
+  left: auto;
+  top: auto;
+  bottom: 0;
+  border-right: solid 17px #FFBE18;
+  border-left: solid 17px transparent;
+  border-bottom: solid 17px #FFBE18;
+  border-top: solid 17px transparent;
+  border-radius: 0 0 8px 0;
+}
+
+/* Image Wrap */
+.trainers-img-wrap {
+  position: relative;
+  border-radius: 10px;
+  border: double 4px transparent;
+  background-image: linear-gradient(rgb(15, 28, 35), rgb(15, 28, 35)), 
+                    linear-gradient(to right, rgb(69, 248, 130), rgb(255, 190, 24));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  margin: 10px;
+  transition: var(--tr-transition);
+  overflow: hidden;
+}
+
+.trainers-team-img {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trainers-team-img img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+  transition: var(--tr-transition);
+}
+
+.trainers-team-card:hover .trainers-team-img img {
+  transform: scale(1.05);
+}
+
+/* Game Logo */
+.trainers-game-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  max-width: 60px;
+  height: auto;
+  opacity: 0;
+  transition: var(--tr-transition);
+}
+
+.trainers-team-card:hover .trainers-game-logo {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Card Content */
+.trainers-team-card-content {
+  padding: 20px 20px 25px;
+  text-align: center;
+}
+
+.trainers-box-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 5px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.trainers-box-title a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: var(--tr-transition);
+}
+
+.trainers-box-title a:hover {
+  color: #45F882;
+}
+
+.trainers-role {
+  font-size: 13px;
+  color: var(--tr-text-muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.trainers-experience {
+  font-size: 12px;
+  color: var(--tr-primary);
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* Social Links */
+.trainers-social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.trainers-social-link {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--tr-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tr-text-muted);
+  transition: var(--tr-transition);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.trainers-social-link:hover {
+  background: var(--tr-primary);
+  border-color: var(--tr-primary);
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* Card Even/Odd Margin */
+.trainers-card-even {
+  margin-top: 0px;
+}
+
+.trainers-card-odd {
+  margin-top: 50px;
+}
+
+/* Carousel Arrows */
+.trainers-carousel :global(.react-multi-carousel-arrow) {
+  background: rgba(11, 19, 38, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--tr-border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: var(--tr-transition);
+}
+
+.trainers-carousel :global(.react-multi-carousel-arrow:hover) {
+  background: var(--tr-primary);
+  transform: scale(1.1);
+}
+
+.trainers-carousel :global(.react-multi-carousel-arrow::before) {
+  color: var(--tr-text);
+  font-size: 16px;
+}
+
+/* Center Mode Styles */
+.trainers-carousel :global(.react-multi-carousel-item) {
+  transition: var(--tr-transition);
+}
+
+.trainers-carousel :global(.react-multi-carousel-item--active) {
+  opacity: 1;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+
+@media screen and (max-width: 1024px) {
+  .trainers-section {
+    padding: 60px 20px;
+  }
+  
+  .trainers-header {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trainers-section {
+    padding: 50px 16px;
+  }
+  
+  .trainers-title {
+    font-size: 32px;
+  }
+  
+  .trainers-card-odd {
+    margin-top: 0px;
+  }
+  
+  .trainers-team-card {
+    max-width: 320px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .trainers-carousel-item {
+    padding: 0 10px;
+  }
+  
+  .trainers-team-img img {
+    max-width: 200px;
+  }
+  
+  .trainers-box-title {
+    font-size: 18px;
+  }
+  
+  .trainers-role {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .trainers-section {
+    padding: 40px 12px;
+  }
+  
+  .trainers-title {
+    font-size: 28px;
+  }
+  
+  .trainers-team-img {
+    padding: 15px;
+  }
+  
+  .trainers-team-img img {
+    max-width: 180px;
+  }
+  
+  .trainers-team-card-content {
+    padding: 15px 15px 20px;
+  }
+  
+  .trainers-box-title {
+    font-size: 16px;
+  }
+  
+  .trainers-game-logo {
+    max-width: 45px;
+    top: 15px;
+    left: 15px;
+  }
+  
+  .trainers-social-link {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .trainers-section {
+    background: white;
+    padding: 20px;
+  }
+  
+  .trainers-ambient {
+    display: none;
+  }
+}

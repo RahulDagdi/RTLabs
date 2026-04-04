@@ -1,0 +1,199 @@
+ 
+  .workshow-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .carousel-container {
+    width: 100%;
+  }
+  
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .workshow-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+ 
+  }
+
+  .workshow-container .react-multi-carousel-list ul li{
+
+    width: 400px !important;
+     margin: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 60px;
+  }
+ 
+  /* .react-multi-carousel-item{
+    width: 400px !important;
+    height: 400px;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 60px;
+   } */
+    
+  /* .workshow-img:hover {
+    border: 2px solid #61CE70;
+      } */
+  
+  .carousel-item:hover .workshow-img {
+    transform: scale(1.05);
+  }
+  
+ 
+  .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #45F882;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  transition: all ease 0.4s;
+
+   animation: pulse 1.5s infinite;
+}
+ 
+ @keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+ .play-btn:hover {
+  animation: pulse 2s infinite;
+  background-color: #36d475; 
+}
+
+  
+  .play-btn .arrow {
+     color: #333; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700 !important;
+    
+
+  }
+  
+   .react-multiple-carousel__arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  .react-multiple-carousel__arrow:hover {
+    background-color: #45F882;
+  }
+  
+   @media (max-width: 576px) {
+    .carousel-item {
+      padding: 5px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-item {
+      padding: 5px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .carousel-container {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
+
+  /* Modal Styles */
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.video-modal {
+  position: relative;
+  max-width: 90%;
+  max-height: 80%;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  animation: slideUp 0.4s ease;
+}
+
+.modal-video-player {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  /* transition: background 0.3s; */
+}
+.close-btn:hover {
+  background-color: #45F882;
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+

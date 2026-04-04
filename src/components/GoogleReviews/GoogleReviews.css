@@ -1,0 +1,738 @@
+/* .review-section {
+  padding: 80px 30px;
+  margin-top: 50px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.review-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: white;
+} */
+
+/* WRAPPER */
+/* .review-wrapper {
+  max-width: 1200px;
+  margin: auto;
+} */
+
+/* SLIDE */
+/* .review-slide {
+  padding: 10px;
+  box-sizing: border-box;
+} */
+
+/* CARD */
+/* .review-card {
+  background: #000;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+  min-height: 300px;
+} */
+
+/* TOP */
+/* .review-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.review-name {
+  color: white;
+  font-weight: 600;
+  text-align: center;
+} */
+
+/* TEXT */
+/* .review-text {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  margin: 15px 0;
+  flex-grow: 1;
+} */
+
+/* STARS */
+/* .review-stars {
+  text-align: center;
+  color: #facc15;
+} */
+
+/* ===== SLICK FIX ===== */
+
+/* .slick-list {
+  overflow: hidden;
+} */
+
+/* .slick-track {
+  display: flex !important;
+} */
+
+/* .slick-slide {
+  height: auto !important;
+} */
+/* 
+.slick-slide > div {
+  width: 100%;
+} */
+
+/* ===== MOBILE PERFECT ===== */
+
+/* @media (max-width: 768px) {
+  .review-title {
+    font-size: 24px;
+  }
+
+  .review-wrapper {
+    padding: 0 5px;
+  }
+
+  .review-slide {
+    padding: 5px;
+  }
+
+  .review-card {
+    width: 100%;
+    min-height: auto;
+  }
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap");
+
+:root {
+  --gr-accent: #00c8ff;
+  --gr-bg: #060810;
+  --gr-card: #0c0f1c;
+  --gr-border: rgba(0, 200, 255, 0.1);
+  --gr-text: #c8d4e8;
+  --gr-muted: #5a6a8a;
+  --gr-white: #ffffff;
+}
+
+/* ═══════════════════════════
+   SECTION
+═══════════════════════════ */
+.gr-section {
+  position: relative;
+  padding: 90px 0 80px;
+  /* background: var(--gr-bg); */
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.gr-bg-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gr-bg-glow--l {
+  top: -200px;
+  left: -200px;
+  /* background: radial-gradient(
+    circle,
+    rgba(0, 200, 255, 0.05) 0%,
+    transparent 70%
+  ); */
+}
+
+.gr-bg-glow--r {
+  bottom: -200px;
+  right: -200px;
+  /* background: radial-gradient(
+    circle,
+    rgba(0, 132, 170, 0.04) 0%,
+    transparent 70%
+  ); */
+}
+
+/* ═══════════════════════════
+   HEADER
+═══════════════════════════ */
+.gr-header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 24px;
+  margin-bottom: 50px;
+}
+
+.gr-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gr-accent);
+  background: rgba(0, 200, 255, 0.07);
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  border-radius: 30px;
+  padding: 6px 18px;
+  margin-bottom: 18px;
+}
+
+.gr-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gr-accent);
+  box-shadow: 0 0 8px var(--gr-accent);
+  animation: gr-pulse 2s ease-in-out infinite;
+}
+
+@keyframes gr-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.7);
+  }
+}
+
+.gr-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  color: var(--gr-white);
+  margin: 0 0 12px;
+  line-height: 1.1;
+}
+
+.gr-accent {
+  color: var(--gr-accent);
+  text-shadow: 0 0 30px rgba(0, 200, 255, 0.3);
+}
+
+.gr-subtitle {
+  font-size: 14px;
+  color: var(--gr-muted);
+  margin: 0 0 28px;
+}
+
+/* Overall rating bar */
+.gr-overall {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 200, 255, 0.12);
+  border-radius: 60px;
+  padding: 12px 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gr-overall-score {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gr-white);
+  line-height: 1;
+}
+
+.gr-overall-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.gr-overall-count {
+  font-size: 12px;
+  color: var(--gr-muted);
+}
+
+.gr-powered {
+  height: 20px;
+  width: auto;
+  opacity: 0.7;
+  filter: brightness(0) invert(1);
+}
+
+/* ═══════════════════════════
+   STARS
+═══════════════════════════ */
+.gr-stars {
+  display: flex;
+  gap: 3px;
+}
+
+.gr-star {
+  width: 16px;
+  height: 16px;
+  fill: transparent;
+  stroke: none;
+}
+
+.gr-star--filled {
+  fill: #facc15;
+}
+.gr-star--empty {
+  fill: rgba(255, 255, 255, 0.1);
+}
+
+/* ═══════════════════════════
+   SLIDER WRAPPER
+═══════════════════════════ */
+.gr-slider-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px 50px;
+}
+
+.gr-slide {
+  padding: 10px 10px;
+}
+
+/* ═══════════════════════════
+   REVIEW CARD
+═══════════════════════════ */
+.gr-card {
+  position: relative;
+  background: var(--gr-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 28px 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 260px;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: gr-enter 0.5s ease both;
+  animation-delay: calc(var(--i, 0) * 0.08s);
+  overflow: hidden;
+}
+
+@keyframes gr-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gr-card:hover {
+  border-color: rgba(0, 200, 255, 0.22);
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(0, 200, 255, 0.05);
+}
+
+/* Top glow on hover */
+.gr-card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gr-accent),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 16px 16px 0 0;
+}
+
+.gr-card:hover .gr-card-glow {
+  opacity: 1;
+}
+
+/* Big decorative quote */
+.gr-quote {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 80px;
+  line-height: 1;
+  color: rgba(0, 200, 255, 0.06);
+  font-family: Georgia, serif;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Review text */
+.gr-text {
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--gr-muted);
+  flex: 1;
+  margin: 0;
+}
+
+/* Divider */
+.gr-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 200, 255, 0.1),
+    transparent
+  );
+}
+
+/* Reviewer row */
+.gr-reviewer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gr-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0, 200, 255, 0.2);
+  flex-shrink: 0;
+}
+
+.gr-avatar--fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.gr-reviewer-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.gr-reviewer-name {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gr-white);
+  letter-spacing: 0.03em;
+}
+
+.gr-reviewer-time {
+  font-size: 11px;
+  color: var(--gr-muted);
+}
+
+.gr-google-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.gr-google-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ═══════════════════════════
+   LOADING SKELETONS
+═══════════════════════════ */
+.gr-loading {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.gr-skeleton {
+  flex: 1;
+  height: 260px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #0c0f1c 25%, #131728 50%, #0c0f1c 75%);
+  background-size: 200% 100%;
+  animation: gr-shimmer 1.5s infinite;
+}
+
+@keyframes gr-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ═══════════════════════════
+   SLICK DOTS OVERRIDE
+═══════════════════════════ */
+.gr-dots {
+  bottom: 12px !important;
+}
+
+.gr-dots li button::before {
+  color: var(--gr-muted) !important;
+  font-size: 8px !important;
+  opacity: 0.5 !important;
+}
+
+.gr-dots li.slick-active button::before {
+  color: var(--gr-accent) !important;
+  opacity: 1 !important;
+}
+
+/* slick track fix */
+.slick-track {
+  display: flex !important;
+}
+.slick-slide {
+  height: auto !important;
+}
+.slick-slide > div {
+  width: 100%;
+  height: 100%;
+}
+.slick-list {
+  overflow: hidden;
+}
+
+/* ═══════════════════════════
+   CTA BUTTON
+═══════════════════════════ */
+.gr-cta {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.gr-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gr-white);
+  background: transparent;
+  border: 1px solid rgba(0, 200, 255, 0.25);
+  border-radius: 60px;
+  padding: 13px 28px;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.gr-cta-btn:hover {
+  background: rgba(0, 200, 255, 0.08);
+  border-color: rgba(0, 200, 255, 0.5);
+  box-shadow: 0 0 30px rgba(0, 200, 255, 0.15);
+  transform: translateY(-2px);
+  color: var(--gr-accent);
+}
+
+.gr-cta-google {
+  width: 20px;
+  height: 20px;
+}
+
+/* ═══════════════════════════
+   RESPONSIVE
+   ═══════════════════════════ */
+@media (max-width: 768px) {
+  .gr-section {
+    padding: 60px 0 60px;
+  }
+  .gr-slider-wrap {
+    padding: 0 16px 50px;
+  }
+  .gr-loading {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+  .gr-skeleton {
+    height: 220px;
+  }
+  .gr-overall {
+    padding: 10px 16px;
+    gap: 12px;
+  }
+  .gr-overall-score {
+    font-size: 28px;
+  }
+}
+
+/* ═══════════════════════════
+ MAP
+    ═══════════════════════════ */
+
+
+    /* ═══════════════════════════
+   MAP SECTION
+═══════════════════════════ */
+.gr-map-section {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 30px;
+}
+
+/* ── Header row ── */
+.gr-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 24px;
+  background: rgba(12, 15, 28, 0.9);
+  border: 1px solid rgba(0, 200, 255, 0.12);
+  border-radius: 14px 14px 0 0;
+  flex-wrap: wrap;
+}
+
+/* Title */
+.gr-map-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gr-map-title i {
+  color: #00c8ff;
+  font-size: 16px;
+  filter: drop-shadow(0 0 6px rgba(0, 200, 255, 0.5));
+}
+
+/* Toggle button */
+.gr-map-toggle {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #00c8ff;
+  background: rgba(0, 200, 255, 0.07);
+  border: 1px solid rgba(0, 200, 255, 0.25);
+  border-radius: 8px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease,
+              box-shadow 0.25s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.gr-map-toggle:hover {
+  background: rgba(0, 200, 255, 0.14);
+  border-color: rgba(0, 200, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.gr-map-toggle:active {
+  transform: translateY(0);
+}
+
+/* ── Map container ── */
+.gr-map-section iframe,
+.gr-map-section > div:last-child {
+  width: 100%;
+  min-height: 360px;
+  border: 1px solid rgba(0, 200, 255, 0.1);
+  border-top: none;
+  border-radius: 0 0 14px 14px;
+  overflow: hidden;
+  display: block;
+  animation: gc-mapFadeIn 0.35s ease both;
+}
+
+@keyframes gc-mapFadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .gr-map-section {
+    padding: 0 16px;
+    margin-top: 30px;
+  }
+
+  .gr-map-header {
+    padding: 14px 16px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .gr-map-title {
+    font-size: 15px;
+  }
+
+  .gr-map-toggle {
+    font-size: 12px;
+    padding: 7px 14px;
+  }
+
+  .gr-map-section iframe,
+  .gr-map-section > div:last-child {
+    min-height: 260px;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gr-map-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .gr-map-toggle {
+    width: 100%;
+    text-align: center;
+  }
+}

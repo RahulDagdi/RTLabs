@@ -1,0 +1,183 @@
+/* ============================================
+   GRAPHICS COURSE - FULLY RESPONSIVE HERO
+   ============================================ */
+
+/* ---------- ROOT VARIABLES ---------- */
+
+
+/* ---------- WRAPPER ---------- */
+.graphics-course {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ---------- HERO WRAPPER ---------- */
+.graphics-course .th-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* ---------- BACKGROUND VIDEO ---------- */
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* ---------- DARK OVERLAY (optional - contrast ke liye) ---------- */
+.graphics-course .hero-overlay {
+  position: absolute;
+  inset: 0;
+  /* background: rgba(0, 0, 0, 0.35); */
+  z-index: 1;
+}
+
+/* ---------- HERO INNER LAYOUT ---------- */
+.graphics-course .hero-style2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graphics-course .hero-title-thumb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- FULL COVER IMAGE ---------- */
+.graphics-course .character {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.graphics-course .character img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ---------- CENTERED CONTENT OVERLAY ---------- */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  width: 90%;
+  max-width: 860px;
+  padding: 0 16px;
+}
+
+/* ---------- HEADING ---------- */
+.title-main {
+  width: 100%;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: clamp(22px, 4.5vw, 56px); /* auto scale between screens */
+  font-family: "Rajdhani", sans-serif;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 0 28px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- BUTTON GROUP ---------- */
+.graphics-course .btn-group {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- BROWSER BUTTON (existing style maintained) ---------- */
+.browser-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* ---------- MID IMAGE RESET ---------- */
+.mid-image {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Tablet landscape (993px - 1199px) */
+@media (max-width: 1199px) {
+  .graphics-course .th-hero-wrapper {
+    height: 85vh;
+  }
+}
+
+/* Tablet portrait (768px - 992px) */
+@media (max-width: 992px) {
+  .graphics-course .th-hero-wrapper {
+    height: 70vh;
+    min-height: 380px;
+  }
+}
+
+/* Mobile large (576px - 767px) */
+@media (max-width: 767px) {
+  .graphics-course .th-hero-wrapper {
+    height: 65vh;
+    min-height: 340px;
+  }
+
+  .graphics-course .character img {
+    object-position: center center;
+  }
+}
+
+/* Mobile small (up to 575px) */
+@media (max-width: 575px) {
+  .graphics-course .th-hero-wrapper {
+    height: 60vh;
+    min-height: 300px;
+  }
+}
+
+/* Very small phones (up to 380px) */
+@media (max-width: 380px) {
+  .graphics-course .th-hero-wrapper {
+    min-height: 280px;
+  }
+}
+
+/* ============================================
+   SMOOTH SCROLL
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}

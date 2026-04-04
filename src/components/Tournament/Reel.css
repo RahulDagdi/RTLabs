@@ -1,0 +1,80 @@
+/* 
+.reel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .reel {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-right-to-left 30s linear infinite; 
+  }
+  
+  .reel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  
+  .reel-name {
+     
+    font-family: "Rajdhani", sans-serif;: 'Rajdhani', sans-serif;
+    color: #e2f0fd;
+text-transform: none;
+font-weight: 700;
+font-size: 30px;
+  }
+  
+  @keyframes scroll-right-to-left {
+    0% {
+      transform: translateX(100%);  
+    }
+    100% {
+      transform: translateX(-100%);  
+    }
+  }
+   */
+
+
+   .reel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .reel {
+    display: flex;
+    width: fit-content;
+    animation: scroll-left 20s linear infinite;
+  }
+  
+  .reel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  
+  .reel-name {
+    font-family: "Rajdhani", sans-serif;: 'Rajdhani', sans-serif;
+    color: #e2f0fd;
+    text-transform: none;
+    font-weight: 700;
+    font-size: 30px;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
