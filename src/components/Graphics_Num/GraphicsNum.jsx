@@ -1,4 +1,3 @@
-
 import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
@@ -63,14 +62,14 @@ const GraphicsNum = () => {
 
         <div className="gn-stats-grid">
           {user_num.map((item) => (
-            <div 
-              className="gn-stat-card" 
+            <div
+              className="gn-stat-card"
               key={item.id}
               onClick={() => handleCardClick(item)}
               role="button"
               tabIndex={0}
               onKeyPress={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
+                if (e.key === "Enter" || e.key === " ") {
                   e.preventDefault();
                   handleCardClick(item);
                 }
