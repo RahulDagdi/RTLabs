@@ -15,10 +15,9 @@ import ContactUsButton from "../ContactUsButton/ContactUsButton";
  * videoSrc  → apni video ka path
  */
 const GraphicsCourse = ({
-  useVideo = true, // Default to video otherwise image for  :- false 
+  useVideo = true,
   imageSrc = "/img/graphics-design-course/RTLabs homepage banner.png",
   videoSrc = "/video/rtlabs.mp4",
-   
 }) => {
   return (
     <div className="graphics-course">
@@ -26,7 +25,6 @@ const GraphicsCourse = ({
         <div
           className="th-hero-wrapper hero-2"
           id="hero"
-          /* Background image as fallback jab image/video load na ho */
           style={
             !useVideo && !imageSrc
               ? {
@@ -81,13 +79,12 @@ const GraphicsCourse = ({
                   </div>
 
                   <div
-                    className="btn-group custom-anim-top wow  gap-3"
+                    className="btn-group custom-anim-top wow gap-3"
                     data-wow-duration="1.2s"
                     data-wow-delay="0.7s"
                   >
-                  <ContactUsButton/>
-
-                    <EnrollNowModal/>
+                    <ContactUsButton />
+                    <EnrollNowModal />
                   </div>
                 </div>
                 {/* ── END CENTERED CONTENT ── */}

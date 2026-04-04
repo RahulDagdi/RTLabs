@@ -2,19 +2,20 @@
    GRAPHICS COURSE - FULLY RESPONSIVE HERO
    ============================================ */
 
-/* ---------- ROOT VARIABLES ---------- */
-
-
 /* ---------- WRAPPER ---------- */
 .graphics-course {
   width: 100%;
   overflow: hidden;
+  /* KEY FIX: body ka padding-top (nav-height) cancel karo
+     taaki hero bilkul top se shuru ho — same as HeroNew */
+  margin-top: calc(-1 * var(--nav-height, 72px));
 }
 
 /* ---------- HERO WRAPPER ---------- */
 .graphics-course .th-hero-wrapper {
   position: relative;
   width: 100%;
+  /* Poora viewport cover karo — navbar ke peeche se neeche tak */
   height: 100vh;
   min-height: 400px;
   display: flex;
@@ -24,8 +25,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  margin-top: 0;
-  padding-top: 0;
 }
 
 /* ---------- BACKGROUND VIDEO ---------- */
@@ -42,7 +41,7 @@
   transform: translateZ(0);
 }
 
-/* ---------- DARK OVERLAY (optional - contrast ke liye) ---------- */
+/* ---------- DARK OVERLAY ---------- */
 .graphics-course .hero-overlay {
   position: absolute;
   inset: 0;
@@ -98,7 +97,7 @@
   width: 100%;
   color: #ffffff;
   font-weight: 700;
-  font-size: clamp(22px, 4.5vw, 56px); /* auto scale between screens */
+  font-size: clamp(22px, 4.5vw, 56px);
   font-family: "Rajdhani", sans-serif;
   line-height: 1.2;
   text-align: center;
@@ -113,14 +112,6 @@
   justify-content: center;
 }
 
-/* ---------- BROWSER BUTTON (existing style maintained) ---------- */
-.browser-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-}
-
 /* ---------- MID IMAGE RESET ---------- */
 .mid-image {
   padding: 0 !important;
@@ -133,42 +124,36 @@
    RESPONSIVE BREAKPOINTS
    ============================================ */
 
-/* Tablet landscape (993px - 1199px) */
 @media (max-width: 1199px) {
   .graphics-course .th-hero-wrapper {
-    height: 85vh;
+    height: 100vh; /* Sab sizes pe full viewport */
   }
 }
 
-/* Tablet portrait (768px - 992px) */
 @media (max-width: 992px) {
   .graphics-course .th-hero-wrapper {
-    height: 70vh;
+    height: 100vh;
     min-height: 380px;
   }
 }
 
-/* Mobile large (576px - 767px) */
 @media (max-width: 767px) {
   .graphics-course .th-hero-wrapper {
-    height: 65vh;
+    height: 100svh; /* safe-area aware on mobile */
     min-height: 340px;
   }
-
   .graphics-course .character img {
     object-position: center center;
   }
 }
 
-/* Mobile small (up to 575px) */
 @media (max-width: 575px) {
   .graphics-course .th-hero-wrapper {
-    height: 60vh;
+    height: 100svh;
     min-height: 300px;
   }
 }
 
-/* Very small phones (up to 380px) */
 @media (max-width: 380px) {
   .graphics-course .th-hero-wrapper {
     min-height: 280px;
