@@ -109,7 +109,7 @@
 
 
 import React from 'react';
-import "./Hero.css";
+import "./HeroNew.css";
 import EnrollNowModal from './EnrollNowModal/EnrollNowModal';
 import AboutUsButton from './AboutUsButton/AboutUsButton';
 

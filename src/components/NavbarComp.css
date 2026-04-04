@@ -20,6 +20,11 @@
 
 /* ═══════════════════════════════════════════
    BODY OFFSET
+   ZAROORI: body ka padding-top hona chahiye.
+   Hero component margin-top: -72px se isko
+   cancel karta hai aur top se shuru hota hai.
+   Baaki pages (About, Contact, etc.) ko
+   padding-top naturally milta hai.
 ═══════════════════════════════════════════ */
 body {
   padding-top: var(--nav-height);
@@ -87,7 +92,6 @@ body {
   transition: color 0.25s ease;
 }
 
-/* underline slide-in on hover */
 .nav_text::after {
   content: '';
   position: absolute;
@@ -156,7 +160,7 @@ body {
 
 @keyframes dropFade {
   from { opacity: 0; transform: translateY(-8px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .navbar .dropdown-menu .dropdown-item {
@@ -222,7 +226,6 @@ body {
     background: rgba(6, 8, 15, 0.95);
   }
 
-  /* Collapse Panel */
   .custom-navbar .navbar-collapse {
     background: linear-gradient(160deg, rgba(6, 10, 22, 0.98), rgba(8, 14, 28, 0.98));
     backdrop-filter: blur(20px);
@@ -234,7 +237,6 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   }
 
-  /* Nav links vertical */
   .custom-navbar .navbar-nav {
     width: 100%;
     gap: 8px;
@@ -261,14 +263,9 @@ body {
     transform: translateX(5px);
   }
 
-  .nav_text::after {
-    display: none;
-  }
+  .nav_text::after { display: none; }
 
-  /* Dropdown on mobile */
-  .custom-navbar .navbar-nav > div {
-    width: 100%;
-  }
+  .custom-navbar .navbar-nav > div { width: 100%; }
 
   .custom-navbar .dropdown-toggle {
     width: 100%;
@@ -293,7 +290,6 @@ body {
     border-left: 2px solid var(--nav-accent) !important;
   }
 
-  /* Join button on mobile */
   .custom-navbar .navbar-collapse > .btn-primary {
     width: 100%;
     margin-top: 16px;
@@ -305,17 +301,9 @@ body {
    SMALL MOBILE (≤ 480px)
 ═══════════════════════════════════════════ */
 @media (max-width: 480px) {
-  .custom-navbar .navbar-brand img {
-    height: 36px;
-  }
-  
-  .nav_text {
-    font-size: 13px;
-  }
-  
-  .custom-navbar .navbar-collapse {
-    padding: 16px 12px 20px;
-  }
+  .custom-navbar .navbar-brand img { height: 36px; }
+  .nav_text { font-size: 13px; }
+  .custom-navbar .navbar-collapse { padding: 16px 12px 20px; }
 }
 
 /* ═══════════════════════════════════════════

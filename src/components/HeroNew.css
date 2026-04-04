@@ -1,0 +1,264 @@
+/* ============================================================
+   HERO SECTION — Full viewport, navbar ke peeche se shuru
+   ============================================================ */
+
+.hero-container {
+  position: relative;
+  /* Body ke padding-top (nav-height) ko cancel karo */
+  margin-top: calc(-1 * var(--nav-height, 72px));
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* ── Video Background ── */
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+  image-rendering: auto;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* ── Content on top of video ── */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* ── Typography ── */
+.heading {
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  font-size: 20px;
+  font-family: "Rajdhani", sans-serif;
+  text-transform: capitalize;
+  line-height: 24px;
+  margin-top: -0.2em;
+  color: var(--e--global-color-main);
+}
+
+.title {
+  background-image: url("/img/hero-title-bg-shape1.svg");
+  padding: 30px;
+  width: 100%;
+  margin: 5px auto;
+  background-size: 100% 100%;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 50px;
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  animation: custom-anim-top 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.sub-title {
+  font-weight: 700;
+  font-size: 64px;
+  font-family: "Rajdhani", sans-serif;
+  color: var(--e--global-color-main);
+  text-transform: none;
+  animation: custom-anim-top 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* ── Buttons ── */
+.button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.explore-button {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  background-color: var(--e--global-color-main);
+  color: #0B0E13;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 12px 15px;
+  min-width: 180px;
+  border-radius: 0px;
+  justify-content: center;
+  clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 50%, calc(100% - 15px) 100%, 15px 100%, 0% 50%);
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+.browser-button {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  background-color: #e2f0fd;
+  color: #0B0E13;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 12px 15px;
+  min-width: 180px;
+  border-radius: 0px;
+  justify-content: center;
+  clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 50%, calc(100% - 15px) 100%, 15px 100%, 0% 50%);
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+.browser-button:hover {
+  background-color: var(--e--global-color-main);
+  color: #0B0E13;
+  -webkit-clip-path: polygon(0px 0%, 100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+  clip-path: polygon(0px 0%, 100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+}
+
+.explore-button:hover {
+  background-color: #ffffff;
+  color: #0B0E13;
+  -webkit-clip-path: polygon(0px 0%, 100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+  clip-path: polygon(0px 0%, 100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+}
+
+.explore-button:after,
+.browser-button:after {
+  right: 5px;
+  left: auto;
+  transform: rotate(180deg);
+  content: "";
+  position: absolute;
+  background-color: var(--title-color);
+  z-index: -1;
+  width: 16px;
+  height: calc(100% - 10px);
+  border-radius: 0;
+  clip-path: polygon(85% 0, 100% 0, 15% 50%, 100% 100%, 85% 100%, 0% 50%);
+}
+
+.explore-button span,
+.browser-button span {
+  text-transform: uppercase;
+}
+
+.explore-button svg,
+.browser-button svg {
+  font-size: 20px;
+}
+
+/* ── Animations ── */
+@keyframes custom-anim-top {
+  0%   { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animated-image {
+  animation: fadeZoomIn 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeZoomIn {
+  from { transform: scale(0.95); }
+  to   { transform: scale(1.05); }
+}
+
+/* ── Modal ── */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(11, 14, 19, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  background: #1a1d25;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  font-family: "Rajdhani", sans-serif;
+  animation: slideUp 0.4s ease;
+}
+
+.modal-header .btn-close { color: #fff !important; }
+.modal-header { border-bottom: none !important; align-items: baseline; }
+
+.close-btn2 {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn2:hover { color: var(--e--global-color-main); }
+.modal-content h2 { font-size: 28px; margin-bottom: 15px; color: var(--e--global-color-main); }
+.modal-content p  { font-size: 16px; margin-bottom: 20px; }
+
+.games-list { list-style: none; padding: 0; }
+.games-list li { padding: 8px 0; border-bottom: 1px solid #333; font-size: 18px; }
+
+@keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 1000px) {
+  .title { font-size: 40px; }
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 30px; padding: 20px; }
+  .sub-title { font-size: 40px; }
+  .button-container { flex-direction: column; gap: 15px; }
+  .explore-button,
+  .browser-button { padding: 10px 20px; font-size: 16px; }
+  #background-video { object-fit: cover; }
+  .hero-content { padding: 0 10px; }
+}
+
+@media (max-width: 600px) {
+  .hero-container {
+    height: 100svh;
+    min-height: 550px;
+  }
+  .heading   { font-size: 18px; }
+  .title     { font-size: 20px; padding: 15px; }
+  .sub-title { font-size: 35px; }
+  .button-container { gap: 10px; }
+  .explore-button,
+  .browser-button { padding: 8px 15px; font-size: 14px; }
+}

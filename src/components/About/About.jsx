@@ -45,108 +45,109 @@ const About = () => {
   ];
 
   return (
-    <section className="about-page" ref={ref}>
-      {/* Animated Background */}
-      <div className="about-bg">
-        <div className="about-bg-circle about-bg-circle-1"></div>
-        <div className="about-bg-circle about-bg-circle-2"></div>
-        <div className="about-bg-circle about-bg-circle-3"></div>
-        <div className="about-bg-circle about-bg-circle-4"></div>
-      </div>
-
-      {/* Floating Particles */}
-      <div className="about-particles">
-        {[...Array(25)].map((_, i) => (
-          <div key={i} className="about-particle" style={{
-            '--delay': `${i * 0.2}s`,
-            '--duration': `${3 + (i % 5)}s`,
-            '--x': `${Math.random() * 100}%`,
-          }}></div>
-        ))}
-      </div>
-
-      <div className="about-container">
-        {/* Hero Section */}
-        <div className="about-hero">
-          <div className="about-hero-badge">
-            <span className="about-hero-icon">✨</span>
-            <span>Welcome to RT Labs</span>
-          </div>
-          <h1 className="about-hero-title">
-            Design, Edit, Animate – 
-            <span className="about-hero-highlight"> Create With Us</span>
-          </h1>
-          <div className="about-hero-line">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <p className="about-hero-subtitle">
-            Transform your creative passion into a professional career with industry-leading training
-          </p>
+    // page-wrapper class navbar ka padding-top deta hai (NavbarComp.css se)
+    <div className="page-wrapper">
+      <section className="about-page" ref={ref}>
+        {/* Animated Background */}
+        <div className="about-bg">
+          <div className="about-bg-circle about-bg-circle-1"></div>
+          <div className="about-bg-circle about-bg-circle-2"></div>
+          <div className="about-bg-circle about-bg-circle-3"></div>
+          <div className="about-bg-circle about-bg-circle-4"></div>
         </div>
 
-        {/* Image and Cards Section - Original Layout */}
-        <div className="about-main-section">
-          <div className="about-main-row">
-            {/* Left Column - Image */}
-            <div className="about-main-col about-main-col--left">
-              <div className="about-main-image-wrapper">
-                <img
-                  src="/img/about/about-1.png"
-                  alt="About Us"
-                  className="about-main-image"
-                />
-                <div className="about-main-image-overlay">
-                  <span>🎯</span>
+        {/* Floating Particles */}
+        <div className="about-particles">
+          {[...Array(25)].map((_, i) => (
+            <div key={i} className="about-particle" style={{
+              '--delay': `${i * 0.2}s`,
+              '--duration': `${3 + (i % 5)}s`,
+              '--x': `${Math.random() * 100}%`,
+            }}></div>
+          ))}
+        </div>
+
+        <div className="about-container">
+          {/* Hero Section */}
+          <div className="about-hero">
+            <div className="about-hero-badge">
+              <span className="about-hero-icon">✨</span>
+              <span>Welcome to RT Labs</span>
+            </div>
+            <h1 className="about-hero-title">
+              Design, Edit, Animate –
+              <span className="about-hero-highlight"> Create With Us</span>
+            </h1>
+            <div className="about-hero-line">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <p className="about-hero-subtitle">
+              Transform your creative passion into a professional career with industry-leading training
+            </p>
+          </div>
+
+          {/* Image and Cards Section */}
+          <div className="about-main-section">
+            <div className="about-main-row">
+              {/* Left Column - Image */}
+              <div className="about-main-col about-main-col--left">
+                <div className="about-main-image-wrapper">
+                  <img
+                    src="/img/about/about-1.png"
+                    alt="About Us"
+                    className="about-main-image"
+                  />
+                  <div className="about-main-image-overlay">
+                    <span>🎯</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Right Column - Cards */}
-            <div className="about-main-col about-main-col--right">
-              <div className="about-cards-section">
-                <div className="about-cards-grid">
-                  {about.map((item, index) => (
-                    <div key={item.id} className="about-card" style={{ animationDelay: `${index * 0.15}s` }}>
-                      <div className="about-card-glow" style={{ background: `radial-gradient(circle, ${item.color}20, transparent)` }}></div>
-                      <div className="about-card-icon" style={{ color: item.color }}>{item.icon}</div>
-                      <div className="about-card-icon-img">
-                        <img src={item.image} alt={item.title} />
+              {/* Right Column - Cards */}
+              <div className="about-main-col about-main-col--right">
+                <div className="about-cards-section">
+                  <div className="about-cards-grid">
+                    {about.map((item, index) => (
+                      <div key={item.id} className="about-card" style={{ animationDelay: `${index * 0.15}s` }}>
+                        <div className="about-card-glow" style={{ background: `radial-gradient(circle, ${item.color}20, transparent)` }}></div>
+                        <div className="about-card-icon" style={{ color: item.color }}>{item.icon}</div>
+                        <div className="about-card-icon-img">
+                          <img src={item.image} alt={item.title} />
+                        </div>
+                        <h3 className="about-card-title" style={{ color: item.color }}>{item.title}</h3>
+                        <p className="about-card-desc">{item.description}</p>
+                        <div className="about-card-arrow">→</div>
                       </div>
-                      <h3 className="about-card-title" style={{ color: item.color }}>{item.title}</h3>
-                      <p className="about-card-desc">{item.description}</p>
-                      <div className="about-card-arrow">→</div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Stats Section */}
-        <div className="about-stats-section">
-          <div className="about-stats-grid">
-            {user_num.map((item) => (
-              <div key={item.id} className="about-stat-card">
-                <div className="about-stat-icon" style={{ color: item.color }}>{item.icon}</div>
-                <div className="about-stat-number">
-                  {inView ? <CountUp start={0} end={item.num} duration={2.5} separator="," /> : 0}
-                  <span className="about-stat-suffix" style={{ color: item.color }}>{item.suffix}</span>
+          {/* Stats Section */}
+          <div className="about-stats-section">
+            <div className="about-stats-grid">
+              {user_num.map((item) => (
+                <div key={item.id} className="about-stat-card">
+                  <div className="about-stat-icon" style={{ color: item.color }}>{item.icon}</div>
+                  <div className="about-stat-number">
+                    {inView ? <CountUp start={0} end={item.num} duration={2.5} separator="," /> : 0}
+                    <span className="about-stat-suffix" style={{ color: item.color }}>{item.suffix}</span>
+                  </div>
+                  <div className="about-stat-text">{item.text}</div>
+                  <div className="about-stat-progress">
+                    <div className="about-stat-progress-bar" style={{ background: `linear-gradient(90deg, ${item.color}, ${item.color}80)` }}></div>
+                  </div>
                 </div>
-                <div className="about-stat-text">{item.text}</div>
-                <div className="about-stat-progress">
-                  <div className="about-stat-progress-bar" style={{ background: `linear-gradient(90deg, ${item.color}, ${item.color}80)` }}></div>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-
-        
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
