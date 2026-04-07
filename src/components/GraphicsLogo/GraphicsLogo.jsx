@@ -78,23 +78,39 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "./GraphicsLogo.css";
 
+// const logos = [
+//   "/img/graphics-design-course/illustrator Tools.png",
+//   "/img/graphics-design-course/Photoshop Tools.png",
+//   "/img/graphics-design-course/Premier pro Tools.png",
+//   "/img/graphics-design-course/After effect Tools.png",
+//   "/img/graphics-design-course/Canva Tools.png",
+//   "/img/graphics-design-course/Coraldraw Tools.png",
+//   "/img/graphics-design-course/Figma Tools.png",
+//   "/img/graphics-design-course/illustrator Tools.png",
+//   "/img/graphics-design-course/Photoshop Tools.png",
+//   "/img/graphics-design-course/Premier pro Tools.png",
+//   "/img/graphics-design-course/After effect Tools.png",
+//   "/img/graphics-design-course/Canva Tools.png",
+//   "/img/graphics-design-course/Coraldraw Tools.png",
+//   "/img/graphics-design-course/Figma Tools.png",
+// ];
 const logos = [
-  "/img/graphics-design-course/illustrator Tools.png",
-  "/img/graphics-design-course/Photoshop Tools.png",
-  "/img/graphics-design-course/Premier pro Tools.png",
-  "/img/graphics-design-course/After effect Tools.png",
-  "/img/graphics-design-course/Canva Tools.png",
-  "/img/graphics-design-course/Coraldraw Tools.png",
-  "/img/graphics-design-course/Figma Tools.png",
-  "/img/graphics-design-course/illustrator Tools.png",
-  "/img/graphics-design-course/Photoshop Tools.png",
-  "/img/graphics-design-course/Premier pro Tools.png",
-  "/img/graphics-design-course/After effect Tools.png",
-  "/img/graphics-design-course/Canva Tools.png",
-  "/img/graphics-design-course/Coraldraw Tools.png",
-  "/img/graphics-design-course/Figma Tools.png",
+  "/img/graphics-design-course/placement-logo/4-fox-business-logo.png",
+  "/img/graphics-design-course/placement-logo/alvion-technologies-logo.png",
+  "/img/graphics-design-course/placement-logo/angle-events-logo.png",
+  "/img/graphics-design-course/placement-logo/coherent-Lab-logo.png",
+  "/img/graphics-design-course/placement-logo/ekam-yoga-logo.png",
+  "/img/graphics-design-course/placement-logo/evardham-education-logo.png",
+  "/img/graphics-design-course/placement-logo/gedu-connect-logo.png",
+  "/img/graphics-design-course/placement-logo/md-corporation-logo.png",
+  "/img/graphics-design-course/placement-logo/nlet-solution-logo.png",
+  "/img/graphics-design-course/placement-logo/parth-publishers-logo.png",
+  "/img/graphics-design-course/placement-logo/podup-jaipur-logo.png",
+  "/img/graphics-design-course/placement-logo/ssenterpreneurs-logo.png",
+  "/img/graphics-design-course/placement-logo/techno-derivation-pvt-limited-logo.png",
+  "/img/graphics-design-course/placement-logo/viawork-business-solution-logo.png",
+  "/img/graphics-design-course/placement-logo/zuvelio-jewels-education-logo.png"
 ];
-
 const GraphicsLogo = () => {
   return (
     <section className="gl-section">
