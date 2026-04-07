@@ -20,11 +20,6 @@
 
 /* ═══════════════════════════════════════════
    BODY OFFSET
-   ZAROORI: body ka padding-top hona chahiye.
-   Hero component margin-top: -72px se isko
-   cancel karta hai aur top se shuru hota hai.
-   Baaki pages (About, Contact, etc.) ko
-   padding-top naturally milta hai.
 ═══════════════════════════════════════════ */
 body {
   padding-top: var(--nav-height);
@@ -63,8 +58,28 @@ body {
 }
 
 /* ═══════════════════════════════════════════
+   CUSTOM CONTAINER - Fixes zoom out issue
+═══════════════════════════════════════════ */
+
+/* Main container that centers everything */
+.nav-container-custom {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* ═══════════════════════════════════════════
    LOGO
 ═══════════════════════════════════════════ */
+.custom-navbar .navbar-brand {
+  flex-shrink: 0;
+}
+
 .custom-navbar .navbar-brand img {
   height: 42px;
   width: auto;
@@ -74,6 +89,44 @@ body {
 
 .custom-navbar .navbar-brand:hover img {
   filter: drop-shadow(0 0 14px rgba(0, 200, 255, 0.6));
+}
+
+/* ═══════════════════════════════════════════
+   DESKTOP CTA BUTTON - Hidden on mobile
+═══════════════════════════════════════════ */
+.desktop-cta {
+  display: block;
+  order: 2;
+}
+
+.desktop-cta .btn-primary {
+  background: linear-gradient(135deg, #00c8ff, #0084aa);
+  border: none;
+  padding: 8px 24px;
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.desktop-cta .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 200, 255, 0.4);
+}
+
+/* ═══════════════════════════════════════════
+   MOBILE CTA BUTTON - Hidden on desktop
+═══════════════════════════════════════════ */
+.mobile-cta {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════
+   NAVBAR COLLAPSE
+═══════════════════════════════════════════ */
+.custom-navbar .navbar-collapse {
+  flex-grow: 0;
+  flex-basis: auto;
 }
 
 /* ═══════════════════════════════════════════
@@ -90,6 +143,7 @@ body {
   position: relative;
   padding-bottom: 2px;
   transition: color 0.25s ease;
+  display: inline-block;
 }
 
 .nav_text::after {
@@ -120,6 +174,7 @@ body {
 .custom-navbar .navbar-nav {
   align-items: center;
   gap: 6px;
+  justify-content: center !important;
 }
 
 .custom-navbar .navbar-nav .nav-link {
@@ -127,8 +182,22 @@ body {
 }
 
 /* ═══════════════════════════════════════════
-   DROPDOWN TOGGLE ARROW
+   DROPDOWN WRAPPER
 ═══════════════════════════════════════════ */
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* ═══════════════════════════════════════════
+   DROPDOWN TOGGLE
+═══════════════════════════════════════════ */
+.navbar .dropdown-toggle {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px;
+}
+
 .navbar .dropdown-toggle::after {
   border-top: 0.32em solid var(--nav-text) !important;
   border-right: 0.32em solid transparent !important;
@@ -142,6 +211,11 @@ body {
 .navbar .show > .dropdown-toggle::after {
   border-top-color: var(--nav-accent) !important;
   transform: rotate(180deg);
+}
+
+.dropdown-title {
+  background: transparent !important;
+  padding: 0 !important;
 }
 
 /* ═══════════════════════════════════════════
@@ -189,6 +263,7 @@ body {
   padding: 6px 10px;
   background: rgba(0, 200, 255, 0.06);
   transition: all 0.3s ease;
+  order: 3;
 }
 
 .custom-navbar .navbar-toggler:hover {
@@ -201,21 +276,19 @@ body {
 }
 
 /* ═══════════════════════════════════════════
-   JOIN NOW BUTTON
+   DESKTOP VIEW (≥ 993px)
 ═══════════════════════════════════════════ */
-.custom-navbar .btn-primary {
-  background: linear-gradient(135deg, #00c8ff, #0084aa);
-  border: none;
-  padding: 8px 24px;
-  font-weight: 600;
-  font-family: "Rajdhani", sans-serif;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-}
-
-.custom-navbar .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(0, 200, 255, 0.4);
+@media (min-width: 993px) {
+  .custom-navbar .navbar-collapse {
+    position: static !important;
+    flex-grow: 1 !important;
+    justify-content: center !important;
+  }
+  
+  .custom-navbar .navbar-nav {
+    width: auto !important;
+    justify-content: center !important;
+  }
 }
 
 /* ═══════════════════════════════════════════
@@ -226,7 +299,46 @@ body {
     background: rgba(6, 8, 15, 0.95);
   }
 
+  /* Hide desktop CTA on mobile */
+  .desktop-cta {
+    display: none;
+  }
+
+  /* Show mobile CTA in hamburger menu */
+  .mobile-cta {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .mobile-cta .btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #00c8ff, #0084aa);
+    border: none;
+    font-weight: 600;
+    font-family: "Rajdhani", sans-serif;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-cta .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 200, 255, 0.4);
+  }
+
+  .nav-container-custom {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  /* Mobile menu adjustments */
   .custom-navbar .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     background: linear-gradient(160deg, rgba(6, 10, 22, 0.98), rgba(8, 14, 28, 0.98));
     backdrop-filter: blur(20px);
     border: 1px solid rgba(0, 200, 255, 0.14);
@@ -235,13 +347,16 @@ body {
     margin-top: 12px;
     padding: 20px 16px 24px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
   }
 
   .custom-navbar .navbar-nav {
     width: 100%;
     gap: 8px;
+    justify-content: flex-start !important;
   }
 
+  /* Regular nav links styling */
   .custom-navbar .navbar-nav .nav-link {
     width: 100%;
     padding: 0 !important;
@@ -263,37 +378,106 @@ body {
     transform: translateX(5px);
   }
 
-  .nav_text::after { display: none; }
+  .nav_text::after { 
+    display: none; 
+  }
 
-  .custom-navbar .navbar-nav > div { width: 100%; }
+  /* ===== DROPDOWN FIX - Align with other nav links ===== */
+  .dropdown-wrapper {
+    width: 100%;
+    position: static !important;
+  }
 
-  .custom-navbar .dropdown-toggle {
+  /* Make dropdown toggle look exactly like nav links */
+  .custom-navbar .navbar-nav .dropdown-toggle {
     width: 100%;
     background: rgba(255, 255, 255, 0.03) !important;
     border: 1px solid rgba(255, 255, 255, 0.06) !important;
     border-radius: 10px !important;
     padding: 12px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
   }
 
-  .custom-navbar .dropdown-toggle .nav_text {
+  /* Ensure the Courses text has same styling */
+  .custom-navbar .navbar-nav .dropdown-toggle .nav_text {
     background: transparent !important;
     border: none !important;
     padding: 0 !important;
-    text-align: left;
+    text-align: center;
+    color: var(--nav-text) !important;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    display: inline-block;
   }
 
-  .custom-navbar .dropdown-menu {
+  /* Fix dropdown arrow position */
+  .custom-navbar .navbar-nav .dropdown-toggle::after {
+    position: static;
+    margin-left: 0;
+    border-top: 0.32em solid var(--nav-text) !important;
+    border-right: 0.32em solid transparent !important;
+    border-left: 0.32em solid transparent !important;
+    transition: transform 0.25s ease;
+  }
+
+  /* Rotate arrow when dropdown is open */
+  .custom-navbar .navbar-nav .show > .dropdown-toggle::after {
+    transform: rotate(180deg);
+    border-top-color: var(--nav-accent) !important;
+  }
+
+  /* Remove any extra styles from parent div */
+  .dropdown-wrapper:hover {
+    background: transparent !important;
+  }
+
+  /* Ensure dropdown menu appears below the button */
+  .custom-navbar .navbar-nav .dropdown-menu {
     position: static !important;
     width: 100% !important;
     margin-top: 8px !important;
     background: rgba(4, 8, 18, 0.95) !important;
     border-left: 2px solid var(--nav-accent) !important;
+    border-radius: 10px !important;
+    transform: none !important;
   }
 
-  .custom-navbar .navbar-collapse > .btn-primary {
-    width: 100%;
-    margin-top: 16px;
-    padding: 12px;
+  /* Hover effect for dropdown items */
+  .custom-navbar .navbar-nav .dropdown-menu .dropdown-item {
+    padding: 12px 16px !important;
+    border-left: 2px solid transparent;
+    text-align: center;
+  }
+
+  .custom-navbar .navbar-nav .dropdown-menu .dropdown-item:hover {
+    background: rgba(0, 200, 255, 0.08) !important;
+    color: var(--nav-accent) !important;
+    padding-left: 24px !important;
+    border-left-color: var(--nav-accent);
+  }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE FIXES FOR ZOOM OUT
+═══════════════════════════════════════════ */
+
+/* For zoom out - ensure container scales properly */
+@media (max-width: 1240px) {
+  .nav-container-custom {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav-container-custom {
+    max-width: 98%;
+    padding: 0 15px;
   }
 }
 
@@ -301,9 +485,21 @@ body {
    SMALL MOBILE (≤ 480px)
 ═══════════════════════════════════════════ */
 @media (max-width: 480px) {
-  .custom-navbar .navbar-brand img { height: 36px; }
-  .nav_text { font-size: 13px; }
-  .custom-navbar .navbar-collapse { padding: 16px 12px 20px; }
+  .nav-container-custom {
+    padding: 0 15px;
+  }
+  
+  .custom-navbar .navbar-brand img { 
+    height: 36px; 
+  }
+  
+  .nav_text { 
+    font-size: 13px; 
+  }
+  
+  .custom-navbar .navbar-collapse { 
+    padding: 16px 12px 20px; 
+  }
 }
 
 /* ═══════════════════════════════════════════
