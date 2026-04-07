@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./ThankYou.css";
 
-export default function ThankYou() {
+const ThankYou = () => {
   const wrapRef = useRef(null);
 
   /* ── Stars ── */
@@ -146,3 +146,5 @@ export default function ThankYou() {
     </>
   );
 }
+
+export default ThankYou;
