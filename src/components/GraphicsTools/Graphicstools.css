@@ -138,6 +138,7 @@
 .gt-card {
   position: relative;
   width: 100%;
+  height: 160px;
   max-width: 180px;
   background: linear-gradient(145deg, #111827, #0d1117);
   border: 1px solid var(--gt-border);

@@ -147,6 +147,16 @@ const GraphicsTools = () => {
       image:
         "https://dizitalmantras.com/wp-content/uploads/2023/09/Wondershare_filmora_logo.svg-removebg-preview.png",
     },
+       {
+      name: "CorelDRAW",
+      image:
+        "https://dizitalmantras.com/wp-content/uploads/2023/09/Corel_Draw_icon-removebg-preview.png",
+    },
+    {
+      name: "Filmora",
+      image:
+        "https://dizitalmantras.com/wp-content/uploads/2023/09/Wondershare_filmora_logo.svg-removebg-preview.png",
+    },
   
   ];
 
