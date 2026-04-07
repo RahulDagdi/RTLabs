@@ -14,7 +14,7 @@
 /* Section Styles */
 .gl-section {
   position: relative;
-  padding: clamp(50px, 8vw, 80px) clamp(16px, 5vw, 24px);
+  /* padding: clamp(50px, 8vw, 80px) clamp(16px, 5vw, 24px); */
   /* background: linear-gradient(180deg, #0a0e17 0%, #0f1419 50%, #0a0e17 100%); */
   font-family: "Rajdhani", sans-serif;
   overflow: hidden;
