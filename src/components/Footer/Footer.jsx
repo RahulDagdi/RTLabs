@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { Link } from 'react-router-dom';
+import { Link, Links } from 'react-router-dom';
 import { RiFacebookFill } from "react-icons/ri";
 import { IoLogoTwitter } from "react-icons/io5";
 import { GrInstagram } from "react-icons/gr";
@@ -48,9 +48,9 @@ const Footer = () => {
           {/* Social icons */}
           <div className="footer-socials">
             {socialLinks.map((social, index) => (
-              <a
+              <Link
                 key={index}
-                href={social.url}
+                to={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-icon"
@@ -58,7 +58,7 @@ const Footer = () => {
                 style={{ '--hover-color': social.color }}
               >
                 {social.icon}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -87,14 +87,14 @@ const Footer = () => {
           <h4 className="footer-widget-title">Contact Info</h4>
           
           <div className="footer-info-pills">
-            <a href="mailto:info@rtlabs.in" className="info-pill">
+            <Link to="mailto:info@rtlabs.in" className="info-pill">
               <span className="info-pill-icon"><HiOutlineMail /></span>
               info@rtlabs.in
-            </a>
-            <a href="tel:+919887448844" className="info-pill">
+            </Link>
+            <Link to="tel:+919887448844" className="info-pill">
               <span className="info-pill-icon"><HiOutlinePhone /></span>
               +91 98874 48844
-            </a>
+            </Link>
             <span className="info-pill">
               <span className="info-pill-icon"><HiOutlineLocationMarker /></span>
               Jaipur, Rajasthan, India

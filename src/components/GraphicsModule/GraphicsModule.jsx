@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import "./GraphicsModule.css";
-import { Link } from "react-router-dom";
+import { Link, Links } from "react-router-dom";
 import { FiDownload } from "react-icons/fi";
 import EnrollNowModal from "../EnrollNowModal/EnrollNowModal";
 

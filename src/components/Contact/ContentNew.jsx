@@ -259,6 +259,7 @@ import * as Yup from "yup";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 const ContactNew = () => {
   const [ref, inView] = useInView({
@@ -544,16 +545,16 @@ const ContactNew = () => {
                   <h4>Connect With Us</h4>
                   <div className="social-icons">
                     {socialLinks.map((social, index) => (
-                      <a
+                      <Link
                         key={index}
-                        href={social.link}
+                        to={social.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="social-icon"
                       >
                         <span className="social-icon-svg">{social.icon}</span>
                 
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>

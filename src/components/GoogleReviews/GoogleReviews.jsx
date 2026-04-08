@@ -391,6 +391,7 @@ import Slider from "react-slick";
 import "./GoogleReviews.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 // ── Fallback static data (will be replaced by live API data) ─────────────────
 const FALLBACK_REVIEWS = [
@@ -694,8 +695,8 @@ const GoogleReviews = () => {
 
         {/* CTA */}
         <div className="gr-cta">
-          <a
-            href="https://www.google.com/search?sca_esv=e0c4261b8df016cf&rlz=1C1JJTC_enIN1140IN1140&sxsrf=ANbL-n7sbNTYlsHGMCxA3QghnXzqPulquw:1774429099896&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOcyxt9c9Ric-RTzI4Vr_OinNeZKhzriSawIc30w7oALocZSbVcxjHZ_9H2P8mg_J_cx1m02p2TGcw-EKf1XL881x-WunR7-HYbJ1GGR69BgGmI6Xm7i50JadLwmKrgzkmpBHi8w_3BkRh-LmWM_ZkiXyDNOf&q=RTLabs+-+Video+Editing+%26+Graphic+Designing+Courses+in+Jaipur+Reviews&sa=X&ved=2ahUKEwixvrbB17qTAxX9fGwGHZ1KBZMQ0bkNegQIMBAH&biw=1280&bih=559&dpr=1.5#lrd=0x396db5a3bf94e9ed:0x46ad11f4497c3203,3,,,,"
+          <Link
+            to="https://www.google.com/search?sca_esv=e0c4261b8df016cf&rlz=1C1JJTC_enIN1140IN1140&sxsrf=ANbL-n7sbNTYlsHGMCxA3QghnXzqPulquw:1774429099896&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOcyxt9c9Ric-RTzI4Vr_OinNeZKhzriSawIc30w7oALocZSbVcxjHZ_9H2P8mg_J_cx1m02p2TGcw-EKf1XL881x-WunR7-HYbJ1GGR69BgGmI6Xm7i50JadLwmKrgzkmpBHi8w_3BkRh-LmWM_ZkiXyDNOf&q=RTLabs+-+Video+Editing+%26+Graphic+Designing+Courses+in+Jaipur+Reviews&sa=X&ved=2ahUKEwixvrbB17qTAxX9fGwGHZ1KBZMQ0bkNegQIMBAH&biw=1280&bih=559&dpr=1.5#lrd=0x396db5a3bf94e9ed:0x46ad11f4497c3203,3,,,,"
             target="_blank"
             rel="noopener noreferrer"
             className="gr-cta-btn"
@@ -707,7 +708,7 @@ const GoogleReviews = () => {
               <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
             </svg>
             Leave a Review on Google
-          </a>
+          </Link>
         </div>
 
 
