@@ -33,7 +33,7 @@ Our mission is to level up the competitive scene by offering transparent matchma
           </div>
           <div className="col-md-6 text-center">
             <img
-              src="/public/img/graphics-design-course/who-we-are.jpg"
+              src="/img/graphics-design-course/who-we-are.jpg"
               alt="Gaming Setup"
               className="img-fluid about-img "
             />
