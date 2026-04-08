@@ -22,6 +22,7 @@ import "./GraphicsLogo.css";
 //   "/img/graphics-design-course/Figma Tools.png",
 // ];
 const logos = [
+ 
   "/img/graphics-design-course/placement-logo/4-fox-business-logo.png",
   "/img/graphics-design-course/placement-logo/alvion-technologies-logo.png",
   "/img/graphics-design-course/placement-logo/angle-events-logo.png",

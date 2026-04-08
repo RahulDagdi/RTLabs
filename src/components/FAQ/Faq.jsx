@@ -65,6 +65,9 @@
 // };
 
 // export default Faq;
+
+
+
 import React, { useState } from "react";
 import "./Faq.css";
 
@@ -72,37 +75,42 @@ const faqData = [
   {
     question: "What is graphic design?",
     answer:
-      "Graphic design is the art and practice of planning and projecting ideas with visual and textual content. It blends creativity with strategy to communicate messages through imagery, typography, and layout. Graphic design is the art and practice of planning and projecting ideas with visual and textual content. It blends creativity with strategy to communicate messages through imagery, typography, and layout.Graphic design is the art and practice of planning and projecting ideas with visual and textual content. It blends creativity with strategy to communicate messages through imagery, typography, and layout."
+      "Graphic design is the art and practice of planning and projecting ideas with visual and textual content. It blends creativity with strategy to communicate messages through imagery, typography, and layout. Graphic design helps brands, businesses, and individuals present ideas effectively and attractively.",
   },
   {
     question: "What is graphic design used for?",
     answer:
-      "It is used in branding, advertising, web design, publications, packaging, social media, and more — anywhere visual communication is needed to engage an audience.",
+      "Graphic design is used in branding, advertising, websites, social media, packaging, and marketing materials. It plays a key role in visually communicating messages and building a strong brand identity.",
   },
   {
     question: "Why should I learn graphic design?",
     answer:
-      "Graphic design skills are in high demand across industries. They open doors to creative careers, freelancing, and entrepreneurship — giving you the power to shape how the world sees a brand.",
+      "Learning graphic design opens up career opportunities in creative fields, freelancing, and digital marketing. It allows you to express creativity while building valuable skills that are in high demand across industries.",
   },
   {
-    question: "What skills will I develop after completing this course in Jaipur?",
+    question: "What skills will I develop in this course?",
     answer:
-      "You'll master design principles, color theory, typography, and industry software like Adobe Photoshop & Illustrator — plus build a real-world portfolio through hands-on projects.",
+      "You will learn design fundamentals, color theory, typography, layout design, and gain hands-on experience with real-world projects to build a strong professional portfolio.",
   },
   {
-    question: "Can I attend a free demo session before enrolling?",
+    question: "Do I need any prior experience to join this course?",
     answer:
-      "Absolutely. Demo sessions are available so you can experience our teaching style, meet the instructor, and understand the full course structure before committing.",
+      "No prior experience is required. This course is designed for beginners as well as those looking to upgrade their skills, starting from basics to advanced concepts.",
   },
   {
-    question: "What jobs require graphic design skills?",
+    question: "Which tools will I learn in graphic design?",
     answer:
-      "Roles like UI/UX Designer, Visual Designer, Art Director, Brand Strategist, Motion Graphics Artist, and Marketing Designer all rely heavily on graphic design expertise.",
+      "You will learn industry-standard tools such as Adobe Photoshop, Illustrator, InDesign, Figma, Canva, and other essential design software used by professionals.",
   },
   {
-    question: "Which graphic design tools are covered in this course?",
+    question: "Can I work as a freelancer after completing this course?",
     answer:
-      "The course covers Adobe Photoshop, Illustrator, InDesign, Figma, CorelDRAW, Canva, and other industry-standard tools used by professionals worldwide.",
+      "Yes, after completing the course you can start freelancing by working on projects like logo design, social media creatives, branding, and more. You will also learn how to build your portfolio and find clients.",
+  },
+  {
+    question: "What career opportunities are available after learning graphic design?",
+    answer:
+      "You can pursue roles such as Graphic Designer, UI/UX Designer, Visual Designer, Branding Specialist, Motion Graphics Artist, and Digital Marketing Designer in various industries.",
   },
 ];
 
@@ -198,20 +206,18 @@ const Faq = () => {
                 />
               );
             })}
-
-         
           </div>
-          
         </div>
-           {/* CTA card inside right col */}
-            <div className="faq-cta-card">
-              <span className="faq-cta-icon">💬</span>
-              <h4>Still have questions?</h4>
-              <p>Our team is ready to help you choose the right course.</p>
-              <a href="/contact-us" className="faq-cta-btn">
-                Talk to Us →
-              </a>
-            </div>
+        
+        {/* CTA card outside grid but inside container */}
+        <div className="faq-cta-card">
+          <span className="faq-cta-icon">💬</span>
+          <h4>Still have questions?</h4>
+          <p>Our team is ready to help you choose the right course.</p>
+          <a href="/contact-us" className="faq-cta-btn">
+            Talk to Us →
+          </a>
+        </div>
       </div>
     </section>
   );

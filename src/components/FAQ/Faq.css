@@ -235,7 +235,7 @@
 }
 
 /* ═══════════════════════════
-   TWO-COLUMN GRID
+   TWO-COLUMN GRID - FIXED HEIGHT CONSISTENCY
 ═══════════════════════════ */
 .faq-grid {
   display: grid;
@@ -251,7 +251,7 @@
 }
 
 /* ═══════════════════════════
-   FAQ ITEM
+   FAQ ITEM - FIXED MIN-HEIGHT FOR CONSISTENCY
 ═══════════════════════════ */
 .faq-item {
   position: relative;
@@ -261,6 +261,7 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 14px;
   padding: 20px 20px 20px 16px;
+  min-height: 85px; /* Ensures all items have same minimum height */
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease,
@@ -282,11 +283,13 @@
   transform: translateY(-2px);
 }
 
+/* When open, item expands naturally but keeps consistent base */
 .faq-item--open {
   border-color: rgba(0, 200, 255, 0.28);
   box-shadow:
     0 0 0 1px rgba(0, 200, 255, 0.08),
     0 12px 40px rgba(0, 0, 0, 0.35);
+  min-height: auto; /* Allows expansion when open */
 }
 
 /* glow pulse when open */
@@ -351,6 +354,8 @@
   line-height: 1.4;
   letter-spacing: 0.02em;
   transition: color 0.25s ease;
+  /* Prevent text from wrapping too early */
+  word-break: break-word;
 }
 
 .faq-item--open .faq-q-text,
@@ -443,7 +448,7 @@
   border-radius: 14px;
   padding: 28px 24px;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 48px;
 }
 
 .faq-cta-icon {
@@ -521,4 +526,9 @@
   .faq-item { padding: 16px 14px; gap: 12px; }
 
   .faq-header { margin-bottom: 40px; }
+  
+  .faq-cta-card {
+    margin-top: 32px;
+    padding: 20px 16px;
+  }
 }

@@ -15,28 +15,28 @@ const GraphicsNum = () => {
       num: 4200,
       suffix: "+",
       text: "Student Enrollment ",
-      icon: "🎮",
+      src: "/img/graphics-design-course/RTLabs-icons/student-enrollment-icon.png",
     },
     {
       id: 2,
       num: 3960,
       suffix: "+",
       text: "Satisfied Student ",
-      icon: "📱",
+      src: "/img/graphics-design-course/RTLabs-icons/satisfied-student-icon.png",
     },
     {
       id: 3,
       num: 1720,
       suffix: "+",
       text: "Success Stories",
-      icon: "🚀",
+      src: "/img/graphics-design-course/RTLabs-icons/success-stories-icon.png",
     },
     {
       id: 4,
       num: 2560,
       suffix: "+",
       text: "Placement ",
-      icon: "🏆",
+      src: "/img/graphics-design-course/RTLabs-icons/placement-icon.png",
     },
   ];
 
@@ -75,7 +75,17 @@ const GraphicsNum = () => {
                 }
               }}
             >
-              <div className="gn-stat-icon">{item.icon}</div>
+              <div className="gn-stat-icon">
+                <img 
+                  src={item.src} 
+                  alt={item.text}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.style.display = 'none';
+                    console.error(`Image not found: ${item.src}`);
+                  }}
+                />
+              </div>
               <div className="gn-stat-value-wrapper">
                 <div className="gn-stat-value">
                   {inView ? (
