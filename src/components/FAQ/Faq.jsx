@@ -70,6 +70,7 @@
 
 import React, { useState } from "react";
 import "./Faq.css";
+import { Link } from "react-router-dom";
 
 const faqData = [
   {
@@ -214,9 +215,9 @@ const Faq = () => {
           <span className="faq-cta-icon">💬</span>
           <h4>Still have questions?</h4>
           <p>Our team is ready to help you choose the right course.</p>
-          <a href="/contact-us" className="faq-cta-btn">
+          <Link to="/contact-us" className="faq-cta-btn">
             Talk to Us →
-          </a>
+          </Link>
         </div>
       </div>
     </section>
