@@ -108,13 +108,13 @@ const Experience = () => {
                 <span className="ex-highlight"> Around the World</span>
               </h2> */}
 
-               <div className="about-header">
+               <div className="ex-title about-header">
               <h3 className="about-title">
              Business Usage  <span className="about-highlight">Around the World</span>
           </h3> 
  </div>
               
-              <p className="ex-description ms-5">
+              <p className="ex-description">
                 Industry usage is a major part of learning any skill. Here is an 
                 understanding of the industrial usage of popular software.
               </p>

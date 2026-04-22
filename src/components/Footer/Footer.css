@@ -62,7 +62,8 @@
   display: grid;
   grid-template-columns: 1.4fr 1fr 1.3fr;
   gap: 170px;
-  padding: 50px 80px 60px;
+  /* padding: 50px 80px 60px; */
+  padding: 50px 50px;
 }
 
 /* ═══════════════════════════════════════════

@@ -49,10 +49,10 @@ const Courses = () => {
                     <div className="col-md-6 fill_div">
                       <div className="course_card text-center">
                         <div className="course_img_wrapper">
-                          <img src={item.image} className="course_img" alt={item?.name} />
-                          <div className="course_img_overlay">
+                          <img src={item.image} className="course_img me-3" alt={item?.name} />
+                          {/* <div className="course_img_overlay">
                             <span>✨</span>
-                          </div>
+                          </div> */}
                         </div>
                         <div className="my-4 course_name">{item?.name}</div>
                         <p className="course_content">{item?.content}</p>
@@ -67,10 +67,10 @@ const Courses = () => {
                     <div className="col-md-6 fill_div">
                       <div className="course_card text-center">
                         <div className="course_img_wrapper">
-                          <img src={item.image} className="course_img" alt={item?.name} />
-                          <div className="course_img_overlay">
+                          <img src={item.image} className="course_img me-3" alt={item?.name} />
+                          {/* <div className="course_img_overlay">
                             <span>✨</span>
-                          </div>
+                          </div> */}
                         </div>
                         <div className="my-4 course_name">{item?.name}</div>
                         <p className="course_content">{item?.content}</p>
