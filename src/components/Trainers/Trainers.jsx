@@ -86,14 +86,22 @@ const Trainers = () => {
 
       <div className="trainers-container">
         <div className="trainers-header">
-          <div className="trainers-badge">
+          {/* <div className="trainers-badge">
             <span className="trainers-badge-icon">👥</span>
             <span>Expert Mentors</span>
-          </div>
-          <h2 className="trainers-title">
+          </div> */}
+
+          {/* <h2 className="trainers-title">
             Meet Our 
             <span className="trainers-highlight"> Industry Experts</span>
-          </h2>
+          </h2> */}
+
+                <div className="about-header">
+              <h3 className="about-title">
+             Meet Our <span className="about-highlight">Industry Experts</span>
+          </h3> 
+ </div>
+
           <p className="trainers-subtitle">
             Learn from the best in the industry with years of hands-on experience
           </p>

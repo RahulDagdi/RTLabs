@@ -118,46 +118,10 @@ const GraphicsTools = () => {
         "https://dizitalmantras.com/wp-content/uploads/2023/09/Wondershare_filmora_logo.svg-removebg-preview.png",
     },
     {
-      name: "Adobe Photoshop",
-      image:
-        "https://dizitalmantras.com/wp-content/uploads/2023/09/Adobe_Photoshop-removebg-preview.png",
-    },
-    {
-      name: "Adobe Illustrator",
-      image:
-        "https://dizitalmantras.com/wp-content/uploads/2023/09/Adobe_Illustrator-removebg-preview.png",
-    },
-    {
-      name: "Adobe After Effects",
-      image:
-        "https://dizitalmantras.com/wp-content/uploads/2023/09/Adobe_After_Effects-removebg-preview.png",
-    },
-    {
-      name: "Adobe Premiere Pro",
+      name: "Canva",
       image:
         "https://dizitalmantras.com/wp-content/uploads/2023/09/Adobe_Premiere_Pro-removebg-preview.png",
     },
-    {
-      name: "CorelDRAW",
-      image:
-        "https://dizitalmantras.com/wp-content/uploads/2023/09/Corel_Draw_icon-removebg-preview.png",
-    },
-    {
-      name: "Filmora",
-      image:
-        "https://dizitalmantras.com/wp-content/uploads/2023/09/Wondershare_filmora_logo.svg-removebg-preview.png",
-    },
-       {
-      name: "CorelDRAW",
-      image:
-        "https://dizitalmantras.com/wp-content/uploads/2023/09/Corel_Draw_icon-removebg-preview.png",
-    },
-    {
-      name: "Filmora",
-      image:
-        "https://dizitalmantras.com/wp-content/uploads/2023/09/Wondershare_filmora_logo.svg-removebg-preview.png",
-    },
-  
   ];
 
   const handleDownloadBrochure = () => {

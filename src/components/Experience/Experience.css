@@ -136,7 +136,10 @@
   font-size: 14px;
   color: var(--ex-text-muted);
   line-height: 1.6;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+  
+  margin:-2rem  auto 30px;
+  color: #ffffff;
 }
 
 /* Skills Two Columns Layout */

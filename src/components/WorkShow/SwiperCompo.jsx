@@ -6,7 +6,7 @@ import Modal from "react-bootstrap/Modal";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
-import "./swiper_new.css";
+import "./SwiperCompo.css";
 
 const SwiperCompo = () => {
   const workList = [
@@ -86,13 +86,20 @@ const SwiperCompo = () => {
       <div className="showcase-container">
         {/* Header */}
         <div className="showcase-header">
-          <div className="showcase-badge">
+          {/* <div className="showcase-badge">
             <span>🎬</span>
             <span>Featured Work</span>
-          </div>
-          <h2 className="showcase-title">
+          </div> */}
+          {/* <h2 className="showcase-title">
             Creative <span className="showcase-highlight">Showcase</span>
-          </h2>
+          </h2> */}
+
+           <div className="about-header">
+              <h3 className="about-title">
+           Creative <span className="about-highlight">Showcase</span>
+          </h3> 
+ </div>
+
           <p className="showcase-subtitle">
             Explore our latest creative projects and video presentations
           </p>

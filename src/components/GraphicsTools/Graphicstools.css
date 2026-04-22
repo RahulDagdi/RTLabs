@@ -338,6 +338,13 @@
 }
 
 /* Responsive Design */
+@media screen and (min-width:1100px ) {
+.gt-grid {
+  display: flex;
+  justify-content: space-between;
+}
+}
+
 @media screen and (max-width: 768px) {
   .gt-section {
     padding: 60px 16px;
@@ -355,6 +362,7 @@
   .gt-card {
     max-width: 140px;
     padding: 16px 12px;
+    height: 130px;
   }
 
   .gt-tool-image {
@@ -382,11 +390,13 @@
 @media screen and (max-width: 480px) {
   .gt-grid {
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    
     gap: 14px;
   }
 
   .gt-card {
     max-width: 120px;
+    height: 130px;
     padding: 12px 8px;
   }
 

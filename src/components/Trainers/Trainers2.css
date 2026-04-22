@@ -131,8 +131,9 @@
   font-size: clamp(14px, 3vw, 16px);
   color: var(--tr-text-muted);
   max-width: 600px;
-  margin: 0 auto;
   line-height: 1.6;
+  margin:-2rem  auto 0;
+  color: #ffffff;
 }
 
 /* Carousel Wrapper */

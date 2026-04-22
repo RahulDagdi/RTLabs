@@ -26,16 +26,17 @@ const Courses = () => {
   return (
     <>
       <div className="m-5">
-        <div className="text-center" style={{ marginTop: "20px" }}>
-           
-         <div className="about_title"> 
-      ✨  Our Courses
-  </div>
+    
+
+
+          <div className="about-header">
+      
           <br />
-          <div className="about_sub my-3">
-            Skilled and Supportive Faculties
-            <span className="excel"> !</span>
-          </div>
+          <h2 className="about-title">
+            Skilled and{" "}
+          
+            <span className="about-highlight">Supportive Faculties</span>
+          </h2> 
         </div>
 
         <div className="row my-5 courses_main">

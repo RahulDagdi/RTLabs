@@ -148,7 +148,7 @@
 
 .usernum-subtitle {
   font-size: 15px;
-  color: var(--un-text-muted);
+  color: var(--un-text);
   max-width: 550px;
   margin: 0 auto;
   line-height: 1.6;
@@ -275,7 +275,8 @@
 }
 
 .usernum-logos-highlight {
-  background: linear-gradient(135deg, var(--un-accent), var(--un-secondary));
+  /* background: linear-gradient(135deg, var(--un-accent), var(--un-secondary)); */
+    /* background: linear-gradient(135deg, #38bdf8, #22d3ee); */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -284,6 +285,8 @@
 .usernum-logos-subtitle {
   font-size: 14px;
   color: var(--un-text-muted);
+  margin-top: -3rem;
+  color: #f1f5f9;
 }
 
 /* Logos Grid */

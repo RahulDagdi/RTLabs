@@ -96,19 +96,31 @@ const UserNum = () => {
       <div className="usernum-container">
         {/* Stats Section */}
         <div className="usernum-stats-wrapper">
-          <div className="usernum-header">
-            <div className="usernum-badge">
-              <span className="usernum-badge-icon">📊</span>
-              <span>Our Achievements</span>
-            </div>
+          {/* <div className="usernum-header">
+           
             <h2 className="usernum-title">
-              Numbers That 
+              Numbers That  {" "}
               <span className="usernum-highlight"> Speak Success</span>
             </h2>
             <p className="usernum-subtitle">
               We take pride in our accomplishments and the trust our students place in us
             </p>
-          </div>
+          </div> */}
+
+ <div className="about-header">
+      
+          <br />
+          <h2 className="about-title">
+            Numbers That  {" "}
+          
+            <span className="about-highlight">Speak Success</span>
+          </h2> 
+           <p className="usernum-subtitle">
+              We take pride in our accomplishments and the trust our students place in us
+            </p>
+        </div>
+
+
 
           <div className="usernum-stats-grid">
             {user_num.map((item, index) => (
@@ -139,13 +151,25 @@ const UserNum = () => {
         {/* Logo Section */}
         <div className="usernum-logos-wrapper">
           <div className="usernum-logos-header">
-            <div className="usernum-logos-badge">
+            {/* <div className="usernum-logos-badge">
               <span className="usernum-logos-icon">🏢</span>
               <span>Trusted Partners</span>
-            </div>
-            <h3 className="usernum-logos-title">
+            </div> */}
+
+
+            {/* <h3 className="usernum-logos-title">
               Our <span className="usernum-logos-highlight">Corporate Partners</span>
             </h3>
+
+             */}
+
+
+ <div className="about-header">
+              <h3 className="about-title">
+            Our Corporate <span className="about-highlight">Partners</span>
+          </h3> 
+ </div>
+
             <p className="usernum-logos-subtitle">
               We are proud to work with industry-leading companies
             </p>

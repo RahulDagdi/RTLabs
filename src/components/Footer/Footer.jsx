@@ -39,7 +39,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <p className="footer-about-text">
+          <p className="footer-about-text" style={{color:"white"}}>
             RTLabs — Jaipur's creative institute for graphic design, animation,
             and video editing. Enhance your ability to create with valuable
             expertise and practical experience.

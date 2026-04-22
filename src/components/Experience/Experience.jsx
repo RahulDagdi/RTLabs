@@ -98,17 +98,23 @@ const Experience = () => {
           {/* Left Column - Content */}
           <div className="ex-col ex-col--left">
             <div className="ex-content-wrapper">
-              <div className="ex-badge">
+              {/* <div className="ex-badge">
                 <span className="ex-badge-icon">⚡</span>
                 <span>Industry Usage</span>
-              </div>
+              </div> */}
               
-              <h2 className="ex-title">
+              {/* <h2 className="ex-title">
                 Business Usage 
                 <span className="ex-highlight"> Around the World</span>
-              </h2>
+              </h2> */}
+
+               <div className="about-header">
+              <h3 className="about-title">
+             Business Usage  <span className="about-highlight">Around the World</span>
+          </h3> 
+ </div>
               
-              <p className="ex-description">
+              <p className="ex-description ms-5">
                 Industry usage is a major part of learning any skill. Here is an 
                 understanding of the industrial usage of popular software.
               </p>

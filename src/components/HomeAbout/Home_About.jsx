@@ -41,10 +41,10 @@ const Home_About = () => {
       <div className="about-container">
         {/* Header Section - Centered */}
         <div className="about-header">
-          <div className="about-badge">
+          {/* <div className="about-badge">
             <span className="about-badge-icon">✨</span>
             <span>Why Choose Us</span>
-          </div>
+          </div> */}
           <br />
           <h2 className="about-title">
             Transforming Creative{" "}
