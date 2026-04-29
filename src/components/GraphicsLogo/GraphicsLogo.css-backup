@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap");
+
+:root {
+  --gl-primary: #00d4ff;
+  --gl-secondary: #00ff88;
+  --gl-accent: #ff6b35;
+  --gl-bg-dark: #0a0e17;
+  --gl-bg-card: #111827;
+  --gl-text: #e2e8f0;
+  --gl-text-muted: #64748b;
+  --gl-border: rgba(0, 212, 255, 0.15);
+}
+
+/* Section Styles */
+.gl-section {
+  position: relative;
+  /* padding: clamp(50px, 8vw, 80px) clamp(16px, 5vw, 24px); */
+  /* background: linear-gradient(180deg, #0a0e17 0%, #0f1419 50%, #0a0e17 100%); */
+  font-family: "Rajdhani", sans-serif;
+  overflow: hidden;
+}
+
+/* Ambient Glow Effects */
+.gl-ambient {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gl-ambient--1 {
+  width: min(600px, 80vw);
+  height: min(600px, 80vw);
+  top: min(-200px, -20vw);
+  left: min(-200px, -20vw);
+  /* background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 0.08) 0%,
+    transparent 70%
+  ); */
+}
+
+.gl-ambient--2 {
+  width: min(500px, 70vw);
+  height: min(500px, 70vw);
+  bottom: min(-150px, -15vw);
+  right: min(-150px, -15vw);
+  /* background: radial-gradient(
+    circle,
+    rgba(0, 255, 136, 0.06) 0%,
+    transparent 70%
+  ); */
+}
+
+/* Container */
+.gl-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.gl-header {
+  text-align: center;
+  margin-bottom: clamp(40px, 8vw, 60px);
+  padding: 0 clamp(10px, 3vw, 20px);
+}
+
+.gl-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: clamp(24px, 6vw, 42px);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--gl-primary), var(--gl-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0 0 clamp(12px, 3vw, 16px);
+  letter-spacing: -0.01em;
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  line-height: 1.2;
+}
+
+.gl-subtitle {
+  font-size: clamp(13px, 3.5vw, 15px);
+  color: var(--gl-text-muted);
+  max-width: min(600px, 90%);
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Slider Wrapper */
+.gl-slider-wrapper {
+  position: relative;
+  width: 100%;
+  padding: clamp(10px, 2vw, 20px) 0;
+}
+
+/* Swiper Customization */
+.gl-swiper {
+  padding: clamp(15px, 3vw, 25px) clamp(5px, 1vw, 10px);
+  overflow: visible !important;
+}
+
+/* Client Card Styles */
+.gl-client-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.gl-card-inner {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(145deg, #4de4ff, #e2f3f7);
+  border: 1px solid var(--gl-border);
+  border-radius: clamp(16px, 4vw, 24px);
+  padding: clamp(15px, 4vw, 25px) clamp(12px, 3vw, 20px);
+  transition: all 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gl-client-card:hover .gl-card-inner {
+  transform: translateY(-8px);
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+}
+
+/* Logo Image - Original opacity and hover increase */
+.gl-client-logo {
+  width: 100%;
+  max-width: clamp(70px, 12vw, 110px);
+  height: auto;
+  object-fit: contain;
+  /* Original opacity - full visibility with slight filter for professional look */
+  opacity: 0.85;
+  filter: grayscale(20%) brightness(0.95);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover effect - increase opacity and remove filters */
+.gl-client-card:hover .gl-client-logo {
+  opacity: 1;
+  filter: grayscale(0%) brightness(1.05);
+  transform: scale(1.08);
+}
+
+/* Card Overlay Effect - Subtle on hover */
+.gl-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 212, 255, 0.05),
+    rgba(0, 255, 136, 0.02)
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.gl-client-card:hover .gl-card-overlay {
+  opacity: 0.3;
+}
+
+.gl-card-icon {
+  font-size: clamp(24px, 5vw, 32px);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  animation: pulse 2s infinite;
+  opacity: 0;
+}
+
+.gl-client-card:hover .gl-card-icon {
+  opacity: 0.8;
+  transform: scale(1);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Swiper Slide Active Effects */
+.gl-swiper .swiper-slide {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.gl-swiper .swiper-slide-active {
+  opacity: 1;
+}
+
+.gl-swiper .swiper-slide:hover {
+  opacity: 1;
+}
+
+/* Optional: Add a subtle glow effect on hover for the entire card */
+.gl-client-card:hover .gl-card-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 212, 255, 0.1),
+    transparent
+  );
+  animation: shimmer 1.5s ease;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Custom Swiper Navigation (Optional) */
+.gl-swiper .swiper-button-prev,
+.gl-swiper .swiper-button-next {
+  color: var(--gl-primary);
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(8px);
+  width: clamp(32px, 5vw, 40px);
+  height: clamp(32px, 5vw, 40px);
+  border-radius: 50%;
+  border: 1px solid var(--gl-border);
+  transition: all 0.3s ease;
+}
+
+.gl-swiper .swiper-button-prev:after,
+.gl-swiper .swiper-button-next:after {
+  font-size: clamp(14px, 2.5vw, 18px);
+}
+
+.gl-swiper .swiper-button-prev:hover,
+.gl-swiper .swiper-button-next:hover {
+  background: rgba(0, 212, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Custom Pagination */
+.gl-swiper .swiper-pagination-bullet {
+  background: var(--gl-text-muted);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.gl-swiper .swiper-pagination-bullet-active {
+  background: var(--gl-primary);
+  opacity: 1;
+  width: 20px;
+  border-radius: 4px;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+
+/* Extra Small Devices (Phones - 480px and below) */
+@media screen and (max-width: 480px) {
+  .gl-section {
+    padding: 40px 12px;
+  }
+
+  .gl-title {
+    font-size: 26px;
+  }
+
+  .gl-subtitle {
+    font-size: 13px;
+  }
+
+  .gl-card-inner {
+    padding: 12px 10px;
+  }
+
+  .gl-client-logo {
+    max-width: 60px;
+    opacity: 0.9; /* Slightly higher opacity on mobile for better visibility */
+  }
+
+  .gl-swiper {
+    padding: 10px 0;
+  }
+
+  .gl-swiper .swiper-slide {
+    opacity: 1;
+  }
+
+  /* Hide navigation on very small screens */
+  .gl-swiper [class*="swiper-button-"] {
+    display: none;
+  }
+}
+
+/* Small Devices (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .gl-section {
+    padding: 50px 20px;
+  }
+
+  .gl-title {
+    font-size: 32px;
+  }
+
+  .gl-subtitle {
+    font-size: 14px;
+  }
+
+  .gl-card-inner {
+    padding: 16px 14px;
+  }
+
+  .gl-client-logo {
+    max-width: 75px;
+    opacity: 0.85;
+  }
+}
+
+/* Medium Devices (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .gl-section {
+    padding: 60px 24px;
+  }
+
+  .gl-title {
+    font-size: 36px;
+  }
+
+  .gl-card-inner {
+    padding: 20px 16px;
+  }
+
+  .gl-client-logo {
+    max-width: 90px;
+    opacity: 0.85;
+  }
+}
+
+/* Large Devices (1025px - 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .gl-card-inner {
+    padding: 22px 18px;
+  }
+
+  .gl-client-logo {
+    max-width: 100px;
+    opacity: 0.85;
+  }
+}
+
+/* Extra Large Devices (1441px and above) */
+@media screen and (min-width: 1441px) {
+  .gl-card-inner {
+    padding: 28px 24px;
+  }
+
+  .gl-client-logo {
+    max-width: 120px;
+    opacity: 0.85;
+  }
+}
+
+/* Landscape Mode for Mobile */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .gl-section {
+    padding: 30px 20px;
+  }
+
+  .gl-header {
+    margin-bottom: 30px;
+  }
+
+  .gl-card-inner {
+    padding: 12px 10px;
+  }
+
+  .gl-client-logo {
+    max-width: 70px;
+    opacity: 0.9;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .gl-client-card:hover .gl-card-inner {
+    transform: none;
+  }
+
+  .gl-client-card:active .gl-card-inner {
+    transform: scale(0.98);
+  }
+
+  .gl-client-card:hover .gl-client-logo {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .gl-card-inner {
+    border: 2px solid var(--gl-primary);
+  }
+
+  .gl-client-logo {
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .gl-section {
+    background: white;
+    padding: 20px;
+  }
+
+  .gl-ambient {
+    display: none;
+  }
+
+  .gl-title {
+    color: black;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+  }
+
+  .gl-client-logo {
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+}
+
+/* Animation for slides */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gl-swiper .swiper-slide {
+  animation: fadeInUp 0.6s ease backwards;
+}
+
+.gl-swiper .swiper-slide:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.gl-swiper .swiper-slide:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.gl-swiper .swiper-slide:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.gl-swiper .swiper-slide:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.gl-swiper .swiper-slide:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.gl-swiper .swiper-slide:nth-child(6) {
+  animation-delay: 0.6s;
+}

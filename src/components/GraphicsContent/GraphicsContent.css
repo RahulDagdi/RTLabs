@@ -239,7 +239,7 @@
   position: absolute;
   inset: 4px;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  /* background: linear-gradient(135deg, #111520, #0c0f1c); */
+  background: linear-gradient(135deg, #111520, #0c0f1c);
     background: "#0b0e13";
   display: flex;
   align-items: center;
