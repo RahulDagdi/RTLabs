@@ -7,6 +7,7 @@
 :root {
   --gn-primary: #38bdf8;
   --gn-secondary: #22d3ee;
+  --gn-white: #ffffff;
   --gn-accent: #84cc16;
   --gn-bg-dark: #020617;
   --gn-bg-card: #0b1326;
@@ -91,7 +92,7 @@
   font-size: clamp(14px, 3.5vw, 16px);
   font-family: "Rajdhani", sans-serif;
   font-weight: 400;
-  color: var(--gn-text-muted);
+  color: var(--gn-white);
   max-width: min(650px, 90%);
   margin: 0 auto;
   line-height: 1.6;

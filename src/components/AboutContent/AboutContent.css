@@ -11,6 +11,7 @@
   --ac-bg: #0b0e13;
   --ac-card: #0f172a;
   --ac-text: #f1f5f9;
+  --ac-white: #ffffff;
   --ac-text-muted: #94a3b8;
   --ac-border: rgba(69, 248, 130, 0.15);
   --ac-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -173,7 +174,7 @@
 /* Text */
 .content-text p {
   font-size: 15px;
-  color: var(--ac-text-muted);
+  color: var(--ac-white);
   line-height: 1.7;
   margin-bottom: 20px;
 }
@@ -268,14 +269,14 @@
 
 .content-feature span {
   font-size: 15px;
-  color: var(--ac-text);
+  color: var(--ac-white);
   font-weight: 500;
 }
 
 /* Rotating Tag */
 .content-tag {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;

@@ -41,13 +41,21 @@ const AboutContent = () => {
         <div className="content-row">
           {/* Left Column */}
           <div className="content-col content-col--left">
-            <div className="content-badge">
+            {/* <div className="content-badge">
               <span className="content-badge-icon">🌟</span>
               <span>About RT Labs</span>
-            </div>
-            <h2 className="content-title">
+            </div> */}
+            {/* <h2 className="content-title">
               Who are <span className="content-highlight">We?</span>
-            </h2>
+            </h2> */}
+           <div className="ex-title about-header">
+              <h3 className="about-title">
+              Who are  <span className="about-highlight">We?</span>
+          </h3> 
+           </div>
+
+
+
             <div className="content-text">
               <p>
                 We at RT Labs focus intensely on creativity and innovation through its operations. 

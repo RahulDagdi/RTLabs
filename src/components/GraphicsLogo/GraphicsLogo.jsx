@@ -163,11 +163,29 @@ const GraphicsLogo = () => {
 
       <div className="gl-container">
         <div className="gl-header">
-          <h2 className="gl-title">Placement Companies Logo</h2>
+
+
+          {/* <h2 className="gl-title">Placement Companies Logo</h2>
           <p className="gl-subtitle">
             Our students are placed at top creative agencies and tech companies
             worldwide
-          </p>
+          </p> */}
+
+
+          
+             <div className="about-header">
+          <h2 className="about-title">
+            Placement Companies{" "}
+          
+            <span className="about-highlight">Logo</span>
+          </h2> 
+           <p className="about-hero-subtitle">
+               Our students are placed at top creative agencies and tech companies
+            worldwide
+            </p>
+        </div>
+
+        
         </div>
 
         <div className="gl-slider-wrapper">

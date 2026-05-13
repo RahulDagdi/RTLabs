@@ -1,0 +1,205 @@
+/* GraphicsModule.css - CLEAN & SIMPLE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gm-section {
+  padding: 80px 24px;
+  background: #0a0e17;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.gm-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.gm-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gm-title {
+  font-size: 42px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00d4ff, #00ff88);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 16px;
+}
+
+.gm-subtitle {
+  font-size: 16px;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
+}
+
+.gm-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  background: transparent;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 40px;
+  color: #00d4ff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.gm-download-btn:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: #00d4ff;
+}
+
+/* Card */
+.gm-card {
+  background: #111827;
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.gm-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gm-card-icon {
+  font-size: 32px;
+}
+
+.gm-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Grid - 4 items per row */
+.gm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.gm-grid-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 24px 16px;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.gm-grid-item:hover {
+  background: rgba(0, 212, 255, 0.08);
+  transform: translateY(-4px);
+}
+
+.gm-icon-box {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 16px;
+}
+
+.gm-grid-item:hover .gm-icon-box {
+  background: rgba(0, 212, 255, 0.2);
+}
+
+.gm-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.gm-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e2e8f0;
+  line-height: 1.4;
+}
+
+/* Enroll */
+.gm-enroll {
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .gm-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gm-section {
+    padding: 50px 16px;
+  }
+  
+  .gm-card {
+    padding: 28px 20px;
+  }
+  
+  .gm-title {
+    font-size: 32px;
+  }
+  
+  .gm-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .gm-grid-item {
+    padding: 18px 12px;
+  }
+  
+  .gm-icon-box {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .gm-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .gm-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gm-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .gm-grid-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+    padding: 14px 18px;
+  }
+  
+  .gm-icon-box {
+    margin: 0;
+  }
+}

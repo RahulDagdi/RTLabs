@@ -70,22 +70,33 @@ const About = () => {
         <div className="about-container">
           {/* Hero Section */}
           <div className="about-hero">
-            <div className="about-hero-badge">
+            {/* <div className="about-hero-badge">
               <span className="about-hero-icon">✨</span>
               <span>Welcome to RT Labs</span>
-            </div>
-            <h1 className="about-hero-title">
+            </div> */}
+            {/* <h1 className="about-hero-title">
               Design, Edit, Animate –
               <span className="about-hero-highlight"> Create With Us</span>
-            </h1>
-            <div className="about-hero-line">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <p className="about-hero-subtitle">
+            </h1> */}
+
+             <div className="about-header">
+          <h2 className="about-title">
+             Design, Edit, Animate –{" "}
+          
+            <span className="about-highlight">Create With Us</span>
+          </h2> 
+           <p className="about-hero-subtitle">
               Transform your creative passion into a professional career with industry-leading training
             </p>
+        </div>
+
+
+            {/* <div className="about-hero-line">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div> */}
+           
           </div>
 
           {/* Image and Cards Section */}
@@ -112,7 +123,7 @@ const About = () => {
                     {about.map((item, index) => (
                       <div key={item.id} className="about-card" style={{ animationDelay: `${index * 0.15}s` }}>
                         <div className="about-card-glow" style={{ background: `radial-gradient(circle, ${item.color}20, transparent)` }}></div>
-                        <div className="about-card-icon" style={{ color: item.color }}>{item.icon}</div>
+                        {/* <div className="about-card-icon" style={{ color: item.color }}>{item.icon}</div> */}
                         <div className="about-card-icon-img">
                           <img src={item.image} alt={item.title} />
                         </div>

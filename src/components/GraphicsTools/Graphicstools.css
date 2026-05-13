@@ -7,6 +7,7 @@
   --gt-bg-dark: #0a0e17;
   --gt-bg-card: #111827;
   --gt-text: #e2e8f0;
+  --gt-white: #ffffff;
   --gt-text-muted: #64748b;
   --gt-border: rgba(0, 212, 255, 0.15);
 }
@@ -77,7 +78,7 @@
 
 .gt-subtitle {
   font-size: 15px;
-  color: var(--gt-text-muted);
+  color: var(--gt-white);
   max-width: 600px;
   margin: 0 auto 28px;
   line-height: 1.6;

@@ -143,12 +143,27 @@ const GraphicsTools = () => {
 
         {/* Header */}
         <div className="gt-header">
-          <h2 className="gt-title">Tools You Will Master</h2>
+          {/* <h2 className="gt-title">Tools You Will Master</h2>
           <p className="gt-subtitle">
             Industry-standard creative suite — from photo manipulation to motion
             graphics. Gain hands-on expertise with the world's most powerful
             design tools.
-          </p>
+          </p> */}
+
+           <div className="about-header">
+          <h2 className="about-title">
+        Tools You Will{" "}
+          
+            <span className="about-highlight">Master</span>
+          </h2> 
+           <p className="about-hero-subtitle">
+           Industry-standard creative suite — from photo manipulation to motion
+            graphics. Gain hands-on expertise with the world's most powerful
+            design tools.
+            </p>
+        </div>
+
+
 
           {/* <button onClick={handleDownloadBrochure} className="gt-download-btn">
             <FiDownload />

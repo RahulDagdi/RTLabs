@@ -53,11 +53,27 @@ const GraphicsNum = () => {
 
       <div className="gn-container">
         <div className="gn-header">
-          <h2 className="gn-title">Our Achievements</h2>
+
+
+          {/* <h2 className="gn-title">Our Achievements</h2>
           <p className="gn-subtitle">
             Empowering the gaming industry with exceptional results and
             satisfied clients worldwide
-          </p>
+          </p> */}
+
+
+          
+             <div className="about-header">
+          <h2 className="about-title">
+            Our{" "}
+          
+            <span className="about-highlight">Achievements</span>
+          </h2> 
+           <p className="about-hero-subtitle">
+               Empowering the gaming industry with exceptional results and
+            satisfied clients worldwide
+            </p>
+        </div>
         </div>
 
         <div className="gn-stats-grid">

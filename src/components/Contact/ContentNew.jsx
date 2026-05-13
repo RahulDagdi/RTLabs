@@ -349,23 +349,35 @@ const ContactNew = () => {
         <div className="contact-container">
           {/* Hero Section */}
           <div className="contact-hero" data-aos="fade-up">
-            <div className="contact-hero-badge">
+            {/* <div className="contact-hero-badge">
               <span>🤝</span>
               <span>Let's Connect</span>
-            </div>
-            <h1 className="contact-hero-title">
+            </div> */}
+
+            {/* <h1 className="contact-hero-title">
               We'd Love to{" "}
               <span className="contact-hero-highlight">Hear From You</span>
-            </h1>
-            <div className="contact-hero-line">
+            </h1> */}
+            {/* <div className="contact-hero-line">
               <span></span>
               <span></span>
               <span></span>
-            </div>
-            <p className="contact-hero-subtitle">
+            </div> */}
+            {/* <p className="contact-hero-subtitle">
               Have questions? We're here to help. Send us a message and we'll
               respond within 24 hours.
-            </p>
+            </p> */}
+
+            <div className="about-header">
+              <h1 className="about-title">
+                We'd Love to{" "}
+                <span className="about-highlight">Hear From You</span>
+              </h1>
+              <p className="about-hero-subtitle">
+                Have questions? We're here to help. Send us a message and we'll
+                respond within 24 hours.
+              </p>
+            </div>
           </div>
 
           {/* Contact Cards */}
@@ -553,7 +565,6 @@ const ContactNew = () => {
                         className="social-icon"
                       >
                         <span className="social-icon-svg">{social.icon}</span>
-                
                       </Link>
                     ))}
                   </div>

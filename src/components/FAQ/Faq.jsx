@@ -166,16 +166,28 @@ const Faq = () => {
       <div className="faq-container">
         {/* Header */}
         <div className="faq-header">
-          <span className="faq-badge">
+          {/* <span className="faq-badge">
             <span className="faq-badge-dot" /> FAQ 
-          </span>
-          <h2 className="faq-title">
+          </span> */}
+          {/* <h2 className="faq-title">
             Frequently Asked{" "}
             <span className="faq-accent">Questions</span>
           </h2>
           <p className="faq-subtitle">
             Everything you need to know about our Graphic Design course in Jaipur.
-          </p>
+          </p> */}
+
+             <div className="faq-title about-header">
+          <h2 className="about-title">
+          Frequently Asked{" "}
+          
+            <span className="about-highlight">Questions</span>
+          </h2> 
+          
+        </div>
+         <p className="faq-subtitl about-hero-subtitle">
+              Everything you need to know about our Graphic Design course in Jaipur.
+            </p>
         </div>
 
         {/* Two-column layout */}

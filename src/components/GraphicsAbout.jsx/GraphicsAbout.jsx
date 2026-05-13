@@ -44,7 +44,14 @@ const GraphicsAbout = () => {
         {/* Row 1 */}
         <div className="row align-items-center ">
           <div className="col-md-6 text-white">
-            <h2 className="about-title mb-3">Who We Are</h2>
+            {/* <h2 className="about-title mb-3">Who We Are</h2> */}
+               <div className="ex-title about-header">
+
+        <h2 className="about-title">
+             Who We <span className="about-highlight">Are</span>
+          </h2> 
+               </div>
+
             <p className="about-text">
               We're a next-gen gaming platform created for players who dream bigger. From high-stakes battles to casual skirmishes, we craft experiences that celebrate performance, passion, and precision.
             </p>

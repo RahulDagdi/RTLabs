@@ -1,4 +1,4 @@
-/* GraphicsModule.css - CLEAN & SIMPLE */
+/* GraphicsModule.css */
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +34,7 @@
 
 .gm-subtitle {
   font-size: 16px;
-  color: #94a3b8;
+  color: #ffffff;
   max-width: 600px;
   margin: 0 auto 28px;
   line-height: 1.6;
@@ -60,146 +60,170 @@
   border-color: #00d4ff;
 }
 
-/* Card */
-.gm-card {
+/* Split Card */
+.gm-split-card {
   background: #111827;
   border: 1px solid rgba(0, 212, 255, 0.15);
   border-radius: 24px;
-  padding: 40px;
+  overflow: hidden;
+  display: flex;
   margin-bottom: 40px;
+}
+
+/* Left Panel */
+.gm-left-panel {
+  width: 42%;
+  flex-shrink: 0;
+  padding: 15px;
+  border-right: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+/* Right Panel */
+.gm-right-panel {
+  flex: 1;
+  padding: 15px;
+  background: rgba(0, 212, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 420px;
 }
 
 .gm-card-header {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .gm-card-icon {
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .gm-card-title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   color: #fff;
 }
 
-/* Grid - 4 items per row */
-.gm-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+/* List Items */
+.gm-learn-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.gm-grid-item {
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
-  padding: 24px 16px;
-  text-align: center;
-  transition: all 0.3s;
+.gm-learn-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
 }
 
-.gm-grid-item:hover {
+.gm-learn-item:hover {
   background: rgba(0, 212, 255, 0.08);
-  transform: translateY(-4px);
 }
 
-.gm-icon-box {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 16px;
+.gm-learn-item.active {
+  background: rgba(0, 212, 255, 0.12);
+  border-left: 3px solid #00d4ff;
+}
+
+.gm-learn-item .gm-list-icon-wrap {
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 212, 255, 0.1);
-  border-radius: 16px;
+  flex-shrink: 0;
+  transition: background 0.2s;
 }
 
-.gm-grid-item:hover .gm-icon-box {
-  background: rgba(0, 212, 255, 0.2);
+.gm-learn-item.active .gm-list-icon-wrap {
+  background: rgba(0, 212, 255, 0.22);
 }
 
-.gm-icon {
-  width: 45px;
-  height: 45px;
+.gm-list-icon {
+  width: 18px;
+  height: 18px;
   object-fit: contain;
 }
 
-.gm-text {
+.gm-learn-item .gm-list-text {
   font-size: 14px;
   font-weight: 500;
   color: #e2e8f0;
-  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.gm-learn-item.active .gm-list-text {
+  color: #00d4ff;
+}
+
+/* Right Panel Content */
+.gm-detail-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.gm-detail-desc {
+  font-size: 15px;
+  color: #ffffff;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.gm-detail-tag {
+  display: inline-block;
+  padding: 5px 14px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 20px;
+  color: #00d4ff;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 /* Enroll */
-.gm-enroll {
+.gm-enroll-wrapper {
   text-align: center;
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-  .gm-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
   .gm-section {
     padding: 50px 16px;
   }
-  
-  .gm-card {
-    padding: 28px 20px;
-  }
-  
-  .gm-title {
-    font-size: 32px;
-  }
-  
-  .gm-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-  
-  .gm-grid-item {
-    padding: 18px 12px;
-  }
-  
-  .gm-icon-box {
-    width: 55px;
-    height: 55px;
-  }
-  
-  .gm-icon {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .gm-text {
-    font-size: 12px;
-  }
-}
 
-@media (max-width: 480px) {
-  .gm-grid {
-    grid-template-columns: 1fr;
+  .gm-title {
+    font-size: 30px;
   }
-  
-  .gm-grid-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    text-align: left;
-    padding: 14px 18px;
+
+  .gm-split-card {
+    flex-direction: column;
   }
-  
-  .gm-icon-box {
-    margin: 0;
+
+  .gm-left-panel {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+    padding: 24px 20px;
+  }
+
+  .gm-right-panel {
+    min-height: 280px;
+    padding: 24px 20px;
   }
 }

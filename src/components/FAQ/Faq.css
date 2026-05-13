@@ -228,7 +228,7 @@
 
 .faq-subtitle {
   font-size: 15px;
-  color: var(--faq-muted);
+  color: var(--faq-white);
   max-width: 480px;
   margin: 0 auto;
   line-height: 1.75;
@@ -467,7 +467,7 @@
 
 .faq-cta-card p {
   font-size: 13px;
-  color: var(--faq-muted);
+  color: var(--faq-white);
   line-height: 1.7;
   margin: 0 0 18px;
 }

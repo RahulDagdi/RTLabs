@@ -12,6 +12,7 @@
   --ab-bg: #020617;
   --ab-card: #0b1326;
   --ab-text: #f1f5f9;
+  --ab-white: #ffffff;
   --ab-text-muted: #94a3b8;
   --ab-border: rgba(56, 189, 248, 0.15);
   --ab-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -211,7 +212,7 @@
 
 .about-hero-subtitle {
   font-size: 16px;
-  color: var(--ab-text-muted);
+  color: var(--ab-white);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -370,7 +371,7 @@
 
 .about-card-desc {
   font-size: 13px;
-  color: var(--ab-text-muted);
+  color: var(--ab-white);
   line-height: 1.5;
 }
 
@@ -440,7 +441,7 @@
 
 .about-stat-text {
   font-size: 14px;
-  color: var(--ab-text-muted);
+  color: var(--ab-white);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 15px;

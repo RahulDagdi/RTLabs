@@ -8,6 +8,7 @@
   --gl-bg-dark: #0a0e17;
   --gl-bg-card: #111827;
   --gl-text: #e2e8f0;
+  --gl-white: #ffffff;
   --gl-text-muted: #64748b;
   --gl-border: rgba(0, 212, 255, 0.15);
 }
@@ -75,7 +76,7 @@
 
 .gl-subtitle {
   font-size: 15px;
-  color: var(--gl-text-muted);
+  color: var(--gl-white);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.5;

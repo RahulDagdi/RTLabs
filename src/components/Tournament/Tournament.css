@@ -63,7 +63,7 @@
   animation-name: custom-anim-top;
   animation: custom-anim-top 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1);
   font-family: "Rajdhani", sans-serif;
-  color: var(--body-color);
+  color: #FFFFFF;
   line-height: 1.75;
 
     

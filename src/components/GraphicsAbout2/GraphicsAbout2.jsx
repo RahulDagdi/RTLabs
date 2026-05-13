@@ -10,7 +10,12 @@ const GraphicsAbout2 = () => {
         {/* Row 2 (reversed layout) */}
         <div className="row align-items-center flex-md-row-reverse g-0">
           <div className="col-md-6 text-white ps-md-5">
-            <h2 className="about-title mb-3">What We Do</h2>
+            {/* <h2 className="about-title mb-3">What We Do</h2> */}
+                 <div className="ex-title about-header">
+              <h3 className="about-title">
+           What We {" "}<span className="about-highlight">Do</span>
+          </h3> 
+ </div>
             <p className="about-text">
               We host electrifying tournaments, foster esports communities, and
               provide platforms for teams to grow, compete, and gain
