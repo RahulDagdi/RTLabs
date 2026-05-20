@@ -110,7 +110,6 @@
 
 // export default GraphicsModule;
 
-
 // // GraphicsModule.jsx
 // import React from "react";
 // import "./GraphicsModule.css";
@@ -172,7 +171,7 @@
 //         {/* What You'll Learn - Premium Card */}
 //         <div className="gm-premium-card">
 //           <div className="gm-card-glow"></div>
-          
+
 //           <div className="gm-card-header">
 //             <div className="gm-header-icon">
 //               <span>📚</span>
@@ -211,7 +210,6 @@
 // };
 
 // export default GraphicsModule;
-
 
 // // GraphicsModule.jsx
 // import React from "react";
@@ -277,54 +275,123 @@
 import React, { useState } from "react";
 import "./GraphicsModule.css";
 import { FiDownload } from "react-icons/fi";
+import GraphicsToolsContentOnly from "../GraphicsTools/GraphicsToolsContentOnly.jsx";
 import EnrollNowModal from "../EnrollNowModal/EnrollNowModal";
+import GraphicsTools from "../GraphicsTools/GraphicsTools";
 
 const learnItems = [
   {
-    label: "Banners & Web Graphics",
-    tag: "Digital Design",
-    desc: "Create eye-catching banners and web graphics optimized for digital platforms. Learn sizing, color psychology, and visual hierarchy to drive clicks and engagement across websites and social media.",
+    label: "Adobe Photoshop",
+    tags: [
+      "Layers & layer styles",
+      "Selection & masking",
+      "Retouching & color correction",
+      "Brushes & filters",
+      "Typography (text tool)",
+      "Photo manipulation",
+      "Background removal",
+      "Smart objects & adjustments",
+      "Export for web/print",
+    ],
+    desc: "The backbone of digital design. Learn photo editing, compositing, retouching, and creating stunning visual content for social media, print, and web.",
   },
   {
-    label: "Push Notification Designs",
-    tag: "Mobile UI",
-    desc: "Design compact, high-impact notification visuals that communicate instantly. Master the art of small-format design with bold typography and minimal imagery for mobile and desktop notifications.",
+    label: "Adobe Illustrator",
+    tags: [
+      "Selection & direct selection tools",
+      "Pen tool & path creation",
+      "Shapes, grids & line tools",
+      "Transform tools (scale, rotate, shear)",
+      "Artboards & resizing",
+      "Typography & type tool",
+      "Vector vs raster basics",
+      "Layers, fill & stroke",
+      "Pathfinder & icon design",
+      "Gradients & color theory",
+      "Exporting (JPEG/PNG)",
+      "Fonts installation",
+      "Custom brushes",
+    ],
+    desc: "Master vector graphics, logo design, brand identity, and illustration. Everything from icons to full brand kits — Illustrator is where great design begins.",
   },
   {
-    label: "Modern Web Layouts",
-    tag: "Web Design",
-    desc: "Build visually stunning, responsive web layouts using grid systems and whitespace. Understand F-pattern reading flow, visual anchoring, and how to guide user attention across a page.",
+    label: "Adobe Premiere Pro",
+    tags: [
+      "Project & sequence creation",
+      "Importing & organizing media",
+      "Timeline & sequence editing",
+      "Basic editing (cut, trim, split)",
+      "Selection & razor tools",
+      "Multiple tracks management",
+      "Transitions & effects",
+      "Color correction & grading (Lumetri)",
+      "Audio editing & noise removal",
+      "Background music & sound effects",
+      "Titles, text & lower thirds",
+      "Essential Graphics & text animation",
+    ],
+    desc: "Learn professional video editing, colour grading, and storytelling through visual media. A must-have skill for content creators and digital marketers alike.",
   },
   {
-    label: "Mobile App UI",
-    tag: "App Design",
-    desc: "Design polished mobile interfaces with proper touch targets, gesture-friendly layouts, and platform conventions for iOS and Android. Learn to prototype and present app screens professionally.",
+    label: "Adobe After Effects",
+    tags: [
+      "Composition & project setup",
+      "Importing & organizing assets",
+      "Timeline & layers",
+      "Keyframes & animation basics",
+      "Transform properties (position, scale, rotation, opacity)",
+      "Graph editor for smooth animation",
+      "Text & motion typography",
+      "Shapes & shape layers",
+      "Effects & presets",
+      "Color correction & grading",
+      "Masks & visual effects",
+    ],
+    desc: "Bring your designs to life with motion graphics, animated logos, and visual effects. One of the most sought-after skills in the creative industry today.",
   },
   {
-    label: "Image Retouching",
-    tag: "Photo Editing",
-    desc: "Master non-destructive photo editing techniques — skin retouching, background removal, color grading, and object manipulation. Achieve professional-grade results with industry-standard tools.",
+    label: "Figma",
+    tags: [
+      "Projects, files & frames",
+      "Shapes, layers & layouts",
+      "Text & typography",
+      "Colors & styles",
+      "Images & assets",
+      "Components & variants",
+      "Auto layout & responsive design",
+      "Prototyping & interactions",
+      "Screen linking & transitions",
+      "Collaboration & sharing",
+      "Design systems & libraries",
+      "Plugins & widgets",
+    ],
+    desc: "The go-to tool for UI/UX design and web prototyping. Learn to design clean, user-friendly interfaces that developers can actually build from.",
   },
   {
-    label: "Infographics",
-    tag: "Data Viz",
-    desc: "Transform complex data into visually compelling narratives. Learn chart types, data visualization principles, icon usage, and layout strategies that make information easy to understand and share.",
-  },
-  {
-    label: "Print Media Essentials",
-    tag: "Print Design",
-    desc: "Understand bleed, crop marks, CMYK color profiles, and resolution requirements for professional print output. Design brochures, flyers, business cards, and packaging that look flawless in print.",
+    label: "Canva",
+    tags: [
+      "Introduction to Canva & interface",
+      "Templates and design basics",
+      "Text, colors & fonts",
+      "Using images and elements",
+      "Basic image editing",
+      "Advanced tools (layers, animation)",
+      "Social media design",
+      "Sharing & downloading",
+      "Practical projects & tips",
+    ],
+    desc: "Fast, flexible, and widely used by businesses of all sizes. Learn to create professional marketing creatives, presentations, and social media content quickly and efficiently.",
   },
 ];
 
 const icons = [
-  "/img/graphics-design-course/illustrator Tools.png",
   "/img/graphics-design-course/Photoshop Tools.png",
+  "/img/graphics-design-course/illustrator Tools.png",
   "/img/graphics-design-course/Premier pro Tools.png",
   "/img/graphics-design-course/After effect Tools.png",
-  "/img/graphics-design-course/Canva Tools.png",
-  "/img/graphics-design-course/Coraldraw Tools.png",
   "/img/graphics-design-course/Figma Tools.png",
+  "/img/graphics-design-course/Canva Tools.png",
+  // "/img/graphics-design-course/Coraldraw Tools.png",
 ];
 
 const GraphicsModule = () => {
@@ -335,20 +402,18 @@ const GraphicsModule = () => {
     <section className="gm-section">
       {/* Header */}
       <div className="gm-header">
- <div className="about-header">
+        <div className="about-header">
           <h2 className="about-title">
-            Web & Graphic Design{" "}
-          
-            <span className="about-highlight">Course Overview</span>
-          </h2> 
-           <p className="about-hero-subtitle">
-             Master industry-accredited tools and techniques used by professional
-          designers worldwide. From web layouts to print media — we cover it all.
-        </p>
+            Everything You Need to Know About Our Graphic Design Training —{" "}
+            <span className="about-highlight">In One Place</span>
+          </h2>
+          <p className="about-hero-subtitle">
+            Thinking about how to start? Our graphic design courses details​ are
+            provided in the brochure and offer a comprehensive overview of the
+            syllabus, as well as tools used, fee structure, batch timings and
+            placement. Download now and start your journey in design today.
+          </p>
         </div>
-
-
-
 
         {/* <h2 className="gm-title">Web & Graphic Design Course Overview</h2>
         <p className="gm-subtitle">
@@ -360,6 +425,8 @@ const GraphicsModule = () => {
           <span>Download Brochure</span>
         </a>
       </div>
+
+      <GraphicsToolsContentOnly />
 
       {/* Split Card */}
       <div className="gm-split-card">
@@ -393,7 +460,15 @@ const GraphicsModule = () => {
         <div className="gm-right-panel">
           <h4 className="gm-detail-title">{active.label}</h4>
           <p className="gm-detail-desc">{active.desc}</p>
-          <span className="gm-detail-tag">{active.tag}</span>
+
+          {/* Render all tags */}
+          <div className="gm-detail-tags">
+            {active.tags.map((tag, i) => (
+              <span className="gm-detail-tag" key={i}>
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 

@@ -13,6 +13,7 @@ import GraphicsAbout from "./components/GraphicsAbout.jsx/GraphicsAbout";
 import GraphicsAbout2 from "./components/GraphicsAbout2/GraphicsAbout2";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import GoogleReviews from "./components/GoogleReviews/GoogleReviews";
+import CareerOptions from "./components/CareerOptions/CareerOptions";
 import { TbBackground } from "react-icons/tb";
 
 const GraphicsPage = () => {
@@ -33,6 +34,8 @@ const GraphicsPage = () => {
       <GraphicsTools />
       <GraphicsAbout2 />
       <GoogleReviews />
+      <CareerOptions />
+
       <Faq />
     </div>
   );

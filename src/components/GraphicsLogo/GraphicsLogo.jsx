@@ -1,4 +1,3 @@
-
 // // import React from "react";
 // // import { Swiper, SwiperSlide } from "swiper/react";
 // // import { Autoplay } from "swiper/modules";
@@ -22,7 +21,7 @@
 // // //   "/img/graphics-design-course/Figma Tools.png",
 // // // ];
 // // const logos = [
- 
+
 // //   "/img/graphics-design-course/placement-logo/4-fox-business-logo.png",
 // //   "/img/graphics-design-course/placement-logo/alvion-technologies-logo.png",
 // //   "/img/graphics-design-course/placement-logo/angle-events-logo.png",
@@ -128,7 +127,6 @@
 
 // // export default GraphicsLogo;
 
-
 // // GraphicsLogo.jsx
 
 import React from "react";
@@ -152,7 +150,7 @@ const logos = [
   "/img/graphics-design-course/placement-logo/ssenterpreneurs-logo.png",
   "/img/graphics-design-course/placement-logo/techno-derivation-pvt-limited-logo.png",
   "/img/graphics-design-course/placement-logo/viawork-business-solution-logo.png",
-  "/img/graphics-design-course/placement-logo/zuvelio-jewels-education-logo.png"
+  "/img/graphics-design-course/placement-logo/Zuvelio-Jewels-education-logo.png",
 ];
 
 const GraphicsLogo = () => {
@@ -163,29 +161,25 @@ const GraphicsLogo = () => {
 
       <div className="gl-container">
         <div className="gl-header">
-
-
           {/* <h2 className="gl-title">Placement Companies Logo</h2>
           <p className="gl-subtitle">
             Our students are placed at top creative agencies and tech companies
             worldwide
           </p> */}
 
-
-          
-             <div className="about-header">
-          <h2 className="about-title">
-            Placement Companies{" "}
-          
-            <span className="about-highlight">Logo</span>
-          </h2> 
-           <p className="about-hero-subtitle">
-               Our students are placed at top creative agencies and tech companies
-            worldwide
+          <div className="about-header">
+            <h2 className="about-title">
+              Our Students Are Placed in{" "}
+              <span className="about-highlight">Top Companies</span>
+            </h2>
+            <p className="about-hero-subtitle">
+              The students from RT Labs are not just certified; they go out and
+              get hired. We have our placement network of top creative agencies,
+              design studios, ed-tech companies and product startups in Jaipur
+              and beyond. We get you job-ready from day one, with portfolio
+              reviews, mock interviews and companies that come directly to you.
             </p>
-        </div>
-
-        
+          </div>
         </div>
 
         <div className="gl-slider-wrapper">

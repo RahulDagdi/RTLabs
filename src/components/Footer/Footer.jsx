@@ -1,6 +1,6 @@
-import React from 'react';
-import './Footer.css';
-import { Link, Links } from 'react-router-dom';
+import React from "react";
+import "./Footer.css";
+import { Link, Links } from "react-router-dom";
 import { RiFacebookFill } from "react-icons/ri";
 import { IoLogoTwitter } from "react-icons/io5";
 import { GrInstagram } from "react-icons/gr";
@@ -13,15 +13,34 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const socialLinks = [
-    { icon: <FaWhatsapp />, url: "https://wa.me/919887448844", name: "WhatsApp", color: "#25D366" },
-    { icon: <GrInstagram />, url: "https://www.instagram.com", name: "Instagram", color: "#E4405F" },
-    { icon: <RiFacebookFill />, url: "https://www.facebook.com", name: "Facebook", color: "#1877F2" },
-    { icon: <FaLinkedinIn />, url: "https://www.linkedin.com", name: "LinkedIn", color: "#0A66C2" },
-
+    {
+      icon: <FaWhatsapp />,
+      url: "https://wa.me/919887448844",
+      name: "WhatsApp",
+      color: "#25D366",
+    },
+    {
+      icon: <GrInstagram />,
+      url: "https://www.instagram.com",
+      name: "Instagram",
+      color: "#E4405F",
+    },
+    {
+      icon: <RiFacebookFill />,
+      url: "https://www.facebook.com",
+      name: "Facebook",
+      color: "#1877F2",
+    },
+    {
+      icon: <FaLinkedinIn />,
+      url: "https://www.linkedin.com",
+      name: "LinkedIn",
+      color: "#0A66C2",
+    },
   ];
 
   return (
@@ -39,7 +58,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <p className="footer-about-text" style={{color:"white"}}>
+          <p className="footer-about-text" style={{ color: "white" }}>
             RTLabs — Jaipur's creative institute for graphic design, animation,
             and video editing. Enhance your ability to create with valuable
             expertise and practical experience.
@@ -55,7 +74,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="social-icon"
                 // aria-label={social.name}
-                style={{ '--hover-color': social.color }}
+                style={{ "--hover-color": social.color }}
               >
                 {social.icon}
               </Link>
@@ -68,16 +87,24 @@ const Footer = () => {
           <h4 className="footer-widget-title">Useful Links</h4>
           <ul className="footer-links">
             <li>
-              <Link to="/about" onClick={handleClick}>About Us</Link>
+              <Link to="/about" onClick={handleClick}>
+                About Us
+              </Link>
             </li>
             <li>
-              <Link to="/contact-us" onClick={handleClick}>Contact Us</Link>
+              <Link to="/contact-us" onClick={handleClick}>
+                Contact Us
+              </Link>
             </li>
             <li>
-              <Link to="/privacy-policy" onClick={handleClick}>Privacy Policy</Link>
+              <Link to="/privacy-policy" onClick={handleClick}>
+                Privacy Policy
+              </Link>
             </li>
             <li>
-              <Link to="/graphics-design-course" onClick={handleClick}>Graphic Design Course</Link>
+              <Link to="/graphics-design-course" onClick={handleClick}>
+                Graphic Design Course
+              </Link>
             </li>
           </ul>
         </div>
@@ -85,19 +112,27 @@ const Footer = () => {
         {/* Col 3: Contact Info */}
         <div className="footer-widget">
           <h4 className="footer-widget-title">Contact Info</h4>
-          
+
           <div className="footer-info-pills">
             <Link to="mailto:info@rtlabs.in" className="info-pill">
-              <span className="info-pill-icon"><HiOutlineMail /></span>
+              <span className="info-pill-icon">
+                <HiOutlineMail />
+              </span>
               info@rtlabs.in
             </Link>
             <Link to="tel:+919887448844" className="info-pill">
-              <span className="info-pill-icon"><HiOutlinePhone /></span>
+              <span className="info-pill-icon">
+                <HiOutlinePhone />
+              </span>
               +91 98874 48844
             </Link>
             <span className="info-pill">
-              <span className="info-pill-icon"><HiOutlineLocationMarker /></span>
-              Jaipur, Rajasthan, India
+              <span className="info-pill-icon">
+                <HiOutlineLocationMarker />
+              </span>
+              103/66, First Floor, Madhyam Marg, near Shree Amar Mishthan
+              Bhandar, Ward Number 43, Sector 101, Mansarovar, Jaipur, Rajasthan
+              302020
             </span>
           </div>
         </div>
@@ -110,7 +145,9 @@ const Footer = () => {
       <div className="footer-copyright">
         <span>© {year}</span>
         <span className="copyright-dot">·</span>
-        <Link to="/" onClick={handleClick}>RTLabs</Link>
+        <Link to="/" onClick={handleClick}>
+          RTLabs
+        </Link>
         <span className="copyright-dot">·</span>
         <span>All Rights Reserved</span>
       </div>

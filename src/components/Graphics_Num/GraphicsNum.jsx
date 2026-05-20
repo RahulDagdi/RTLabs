@@ -14,14 +14,14 @@ const GraphicsNum = () => {
       id: 1,
       num: 4200,
       suffix: "+",
-      text: "Student Enrollment ",
+      text: "Student Enrolments",
       src: "/img/graphics-design-course/RTLabs-icons/student-enrollment-icon.png",
     },
     {
       id: 2,
       num: 3960,
       suffix: "+",
-      text: "Satisfied Student ",
+      text: "Satisfied Students",
       src: "/img/graphics-design-course/RTLabs-icons/satisfied-student-icon.png",
     },
     {
@@ -35,7 +35,7 @@ const GraphicsNum = () => {
       id: 4,
       num: 2560,
       suffix: "+",
-      text: "Placement ",
+      text: "Placements",
       src: "/img/graphics-design-course/RTLabs-icons/placement-icon.png",
     },
   ];
@@ -65,13 +65,13 @@ const GraphicsNum = () => {
           
              <div className="about-header">
           <h2 className="about-title">
-            Our{" "}
+            Our Placement & Student {" "}
           
-            <span className="about-highlight">Achievements</span>
+            <span className="about-highlight">Success Record</span>
           </h2> 
            <p className="about-hero-subtitle">
-               Empowering the gaming industry with exceptional results and
-            satisfied clients worldwide
+              From first brushstroke to first paycheck — here's the proof that RT Labs delivers results.
+              
             </p>
         </div>
         </div>

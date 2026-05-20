@@ -54,15 +54,10 @@ const GraphicsCourse = ({
           <div className="container-fluid mid-image">
             <div className="hero-style2">
               <div className="hero-title-thumb">
-
                 {/* ── BACKGROUND IMAGE (video nahi to image show hoga) ── */}
                 {!useVideo && imageSrc && (
                   <div className="character">
-                    <img
-                      decoding="async"
-                      src={imageSrc}
-                      alt="Hero Banner"
-                    />
+                    <img decoding="async" src={imageSrc} alt="Hero Banner" />
                   </div>
                 )}
 
@@ -74,7 +69,8 @@ const GraphicsCourse = ({
                     data-wow-delay="0.5s"
                   >
                     <h1 className="title-main">
-                      Become a Professional Graphic Designer
+                      Graphic Design Course in Jaipur with 100% Placement
+                      Support
                     </h1>
                   </div>
 
@@ -88,7 +84,6 @@ const GraphicsCourse = ({
                   </div>
                 </div>
                 {/* ── END CENTERED CONTENT ── */}
-
               </div>
             </div>
           </div>

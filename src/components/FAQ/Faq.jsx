@@ -66,8 +66,6 @@
 
 // export default Faq;
 
-
-
 import React, { useState } from "react";
 import "./Faq.css";
 import { Link } from "react-router-dom";
@@ -76,42 +74,43 @@ const faqData = [
   {
     question: "What is graphic design?",
     answer:
-      "Graphic design is the art and practice of planning and projecting ideas with visual and textual content. It blends creativity with strategy to communicate messages through imagery, typography, and layout. Graphic design helps brands, businesses, and individuals present ideas effectively and attractively.",
+      "Graphic design is about visual storytelling — how we communicate ideas and messages using images, typography, colour and layout. This is applied to logos, social media, advertisements, websites and packaging, among others.",
   },
   {
     question: "What is graphic design used for?",
     answer:
-      "Graphic design is used in branding, advertising, websites, social media, packaging, and marketing materials. It plays a key role in visually communicating messages and building a strong brand identity.",
+      "Almost every industry uses graphic design — everything from branding and advertising to UI/UX design, video production, and social media content creation. Graphic design is essential for any business that needs to visually communicate.",
   },
   {
     question: "Why should I learn graphic design?",
     answer:
-      "Learning graphic design opens up career opportunities in creative fields, freelancing, and digital marketing. It allows you to express creativity while building valuable skills that are in high demand across industries.",
+      "Graphic Design is one of the most flexible and sought-after creative skills in 2026. It gives you access to full-time jobs, freelancing opportunities, or even running your own design studio. You can start earning within a few months after taking the right course.",
   },
   {
     question: "What skills will I develop in this course?",
     answer:
-      "You will learn design fundamentals, color theory, typography, layout design, and gain hands-on experience with real-world projects to build a strong professional portfolio.",
+      "You will learn photo editing, logo design, vector art, video editing, motion graphics, UI/UX design, and social media creatives using 6 professional tools: Photoshop, Illustrator, Premiere Pro, After Effects, Figma, and Canva.",
   },
   {
     question: "Do I need any prior experience to join this course?",
     answer:
-      "No prior experience is required. This course is designed for beginners as well as those looking to upgrade their skills, starting from basics to advanced concepts.",
+      "No prior experience is needed. Whether you are an absolute beginner or someone looking to strengthen your basics, this course is designed to help you learn from the ground up with a smooth progression into advanced, job-ready skills.",
   },
   {
-    question: "Which tools will I learn in graphic design?",
+    question: "Which tools will I learn in these graphic design classes?",
     answer:
-      "You will learn industry-standard tools such as Adobe Photoshop, Illustrator, InDesign, Figma, Canva, and other essential design software used by professionals.",
+      "You will learn six of the most popular design tools in the industry, including Adobe Photoshop, Adobe Illustrator, Adobe Premiere Pro, Adobe After Effects, Figma, and Canva.",
   },
   {
     question: "Can I work as a freelancer after completing this course?",
     answer:
-      "Yes, after completing the course you can start freelancing by working on projects like logo design, social media creatives, branding, and more. You will also learn how to build your portfolio and find clients.",
+      "Absolutely. Many students from RT Labs work as freelancers after completing the course. The portfolio you build during the training helps you start finding clients and earning from real projects from day one.",
   },
   {
-    question: "What career opportunities are available after learning graphic design?",
+    question:
+      "What career opportunities are available after learning graphic design?",
     answer:
-      "You can pursue roles such as Graphic Designer, UI/UX Designer, Visual Designer, Branding Specialist, Motion Graphics Artist, and Digital Marketing Designer in various industries.",
+      "After completing this certificate course in graphic design, you can apply for roles such as Graphic Designer, Logo Designer, UI/UX Designer, Motion Graphics Artist, Social Media Designer, Video Editor, and Web Designer, with average salaries ranging from ₹2.8 LPA to ₹5+ LPA.",
   },
 ];
 
@@ -121,9 +120,7 @@ const FaqItem = ({ item, index, isOpen, onToggle }) => {
       className={`faq-item ${isOpen ? "faq-item--open" : ""}`}
       style={{ "--i": index }}
     >
-      <span className="faq-num">
-        {String(index + 1).padStart(2, "0")}
-      </span>
+      <span className="faq-num">{String(index + 1).padStart(2, "0")}</span>
 
       <div className="faq-inner">
         <button className="faq-question" onClick={() => onToggle(index)}>
@@ -177,17 +174,16 @@ const Faq = () => {
             Everything you need to know about our Graphic Design course in Jaipur.
           </p> */}
 
-             <div className="faq-title about-header">
-          <h2 className="about-title">
-          Frequently Asked{" "}
-          
-            <span className="about-highlight">Questions</span>
-          </h2> 
-          
-        </div>
-         <p className="faq-subtitl about-hero-subtitle">
-              Everything you need to know about our Graphic Design course in Jaipur.
-            </p>
+          <div className="faq-title about-header">
+            <h2 className="about-title">
+              Frequently Asked{" "}
+              <span className="about-highlight">Questions</span>
+            </h2>
+          </div>
+          <p className="faq-subtitl about-hero-subtitle">
+            Everything you need to know about our Graphic Design course in
+            Jaipur.
+          </p>
         </div>
 
         {/* Two-column layout */}
@@ -221,12 +217,16 @@ const Faq = () => {
             })}
           </div>
         </div>
-        
+
         {/* CTA card outside grid but inside container */}
         <div className="faq-cta-card">
           <span className="faq-cta-icon">💬</span>
-          <h4>Still have questions?</h4>
-          <p>Our team is ready to help you choose the right course.</p>
+          <h4>Unsure Which One to Choose? Let's Talk.</h4>
+          <p>
+            No pressure, just honest advice using our counsellors' insights to
+            help you decide the best fit for your goals, background, and
+            schedule.
+          </p>
           <Link to="/contact-us" className="faq-cta-btn">
             Talk to Us →
           </Link>

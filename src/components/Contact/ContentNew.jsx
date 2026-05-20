@@ -329,13 +329,43 @@ const ContactNew = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact RTLabs Jaipur | Design & Editing Courses</title>
-        <meta
-          name="description"
-          content="Have questions? Contact RTlabs for any inquiries about courses, support, or anything else! We're ready to help you succeed."
-        />
-      </Helmet>
+     <Helmet>
+           <title>Contact RTLabs Jaipur | Design & Editing Courses</title>
+           <meta
+             key="description"
+             name="description"
+             content="Have questions? Contact RTlabs for any inquiries about courses, support, or anything else! We’re ready to help you succeed."
+           />
+           <meta key="author" name="author" content="RTLabs" />
+           <meta key="language" name="language" content="English" />
+           <meta key="revisit" name="revisit-after" content="7 days" />
+           <meta
+             key="og:title"
+             property="og:title"
+             content="Contact RTLabs Jaipur | Design & Editing Courses"
+           />
+           <meta
+             key="og:description"
+             property="og:description"
+             content="Have questions? Contact RTlabs for any inquiries about courses, support, or anything else! We’re ready to help you succeed."
+           />
+           <meta key="robots" name="robots" content="index, follow" />
+           <meta
+             key="og:image"
+             property="og:image"
+             content="https://rtlabs.in/img/about_home.png"
+           />
+           <meta
+             key="og:url"
+             property="og:url"
+             content="https://rtlabs.in/contact-us"
+           />
+           <link
+             key="canonical"
+             rel="canonical"
+             href="https://rtlabs.in/contact-us"
+           />
+         </Helmet>
 
       <section className="contact-page" ref={ref}>
         {/* Animated Background */}
@@ -349,24 +379,7 @@ const ContactNew = () => {
         <div className="contact-container">
           {/* Hero Section */}
           <div className="contact-hero" data-aos="fade-up">
-            {/* <div className="contact-hero-badge">
-              <span>🤝</span>
-              <span>Let's Connect</span>
-            </div> */}
-
-            {/* <h1 className="contact-hero-title">
-              We'd Love to{" "}
-              <span className="contact-hero-highlight">Hear From You</span>
-            </h1> */}
-            {/* <div className="contact-hero-line">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div> */}
-            {/* <p className="contact-hero-subtitle">
-              Have questions? We're here to help. Send us a message and we'll
-              respond within 24 hours.
-            </p> */}
+         
 
             <div className="about-header">
               <h1 className="about-title">

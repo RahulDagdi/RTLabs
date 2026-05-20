@@ -228,8 +228,8 @@
 }
 
 .info-pill:hover {
-  background: rgba(0, 200, 255, 0.06);
-  border-color: rgba(0, 200, 255, 0.18);
+  /* background: rgba(0, 200, 255, 0.06); */
+  /* border-color: rgba(0, 200, 255, 0.18); */
   color: #c0cfe8;
   transform: translateX(5px);
 }
@@ -249,7 +249,7 @@
 }
 
 .info-pill:hover .info-pill-icon {
-  background: rgba(0, 200, 255, 0.2);
+  /* background: rgba(0, 200, 255, 0.2); */
   transform: scale(1.05);
 }
 

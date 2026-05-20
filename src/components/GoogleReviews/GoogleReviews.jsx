@@ -697,7 +697,7 @@ const GoogleReviews = () => {
     slidesToScroll: 1,
     pauseOnHover: true,
     arrows: false,
-    dotsClass: "slick-dots gr-dots",
+    // dotsClass: "slick-dots gr-dots",
   };
 
   return (

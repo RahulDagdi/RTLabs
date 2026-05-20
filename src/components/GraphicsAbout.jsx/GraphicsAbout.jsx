@@ -33,40 +33,66 @@
 
 // export default GraphicsAbout;
 
-
 import React from "react";
 import "./GraphicsAbout.css";
 
 const GraphicsAbout = () => {
   return (
-    <section className="about-section py-5"  style={{background: "#0b0e13"}}>
+    <section className="about-section" style={{ background: "#0b0e13" }}>
       <div className="mx-5">
         {/* Row 1 */}
         <div className="row align-items-center ">
           <div className="col-md-6 text-white">
             {/* <h2 className="about-title mb-3">Who We Are</h2> */}
-               <div className="ex-title about-header">
-
-        <h2 className="about-title">
-             Who We <span className="about-highlight">Are</span>
-          </h2> 
-               </div>
+            <div className="ex-title about-header">
+              <h2 className="about-title">
+                Build a Creative Career with a
+                <span className="about-highlight">Graphic Design Course </span>
+              </h2>
+            </div>
 
             <p className="about-text">
-              We're a next-gen gaming platform created for players who dream bigger. From high-stakes battles to casual skirmishes, we craft experiences that celebrate performance, passion, and precision.
-            </p>
-            <p className="about-text">
-              Whether you’re a lone warrior or part of a team, we’re here to power your path to greatness.
-            </p>
-            <p>
-              We're a next-gen gaming platform created for players who dream bigger. From high-stakes battles to casual skirmishes, we craft experiences that celebrate performance, passion, and precision.
+              Graphic design is among the most sought-after creative skills in
+              the competitive world. Designers are in demand by every brand,
+              business, and startup — and the opportunities just keep increasing
+              each year.
+              <br />
+              At RT Labs, the graphic design training in Jaipur is crafted for
+              peo­ple look­ing for actu­al skills, real tools and jobs — not
+              just a cer­tifi­cate ready to be hung on the wall.
+              <ul className="about-list">
+                <li className="fw-bold" style={{ listStyle: "none" }}>
+                  Who should join this course?
+                </li>
+                <li>
+                  Any stream students who want to build a creative career.
+                </li>
 
-Whether you’re a lone warrior or part of a team, we’re here to power your path to greatness.
-We're a next-gen gaming platform created for players who dream bigger. From high-stakes battles to casual skirmishes, we craft experiences that celebrate performance, passion, and precision.
+                <li>
+                  Freshers who are confused about entering the design or
+                  advertising industry.
+                </li>
 
-Whether you’re a lone warrior or part of a team, we’re here to power your path to greatness.
-We're a next-gen gaming platform created for players who dream bigger. From high-stakes battles to casual skirmishes, we craft experiences that celebrate performance, passion, and precision.
+                <li>
+                  Ambitious working professionals looking to switch their domain
+                  into the creative field.
+                </li>
 
+                <li>
+                  Freelancers who want to start delivering professional design
+                  services.
+                </li>
+
+                <li>
+                  Entrepreneurs who want to manage their own branding and
+                  creatives.
+                </li>
+              </ul>
+              <p className="about-text">
+                The course is designed for absolute beginners to job-ready
+                learners, whether you're a design novice or already have a few
+                basics under your belt.
+              </p>
             </p>
           </div>
           <div className="col-md-6 text-center">

@@ -143,12 +143,7 @@ const GraphicsTools = () => {
 
         {/* Header */}
         <div className="gt-header">
-          {/* <h2 className="gt-title">Tools You Will Master</h2>
-          <p className="gt-subtitle">
-            Industry-standard creative suite — from photo manipulation to motion
-            graphics. Gain hands-on expertise with the world's most powerful
-            design tools.
-          </p> */}
+        
 
            <div className="about-header">
           <h2 className="about-title">
@@ -165,10 +160,7 @@ const GraphicsTools = () => {
 
 
 
-          {/* <button onClick={handleDownloadBrochure} className="gt-download-btn">
-            <FiDownload />
-            <span>Download Brochure</span>
-          </button> */}
+        
         </div>
 
         {/* Tools Grid */}
@@ -187,31 +179,10 @@ const GraphicsTools = () => {
           ))}
         </div>
 
-        {/* Enroll button */}
-        {/* <div className="gt-enroll-wrapper">
-          <button onClick={openModal} className="gt-enroll-btn">
-            <span>🎓 Enroll Now</span>
-            <span className="gt-arrow">→</span>
-          </button>
-        </div> */}
+      
       </section>
 
-      {/* Modal */}
-      {/* {isModalOpen && (
-        <div className="gt-modal-overlay" onClick={closeModal}>
-          <div className="gt-modal" onClick={(e) => e.stopPropagation()}>
-            <div className="gt-modal-icon">🎓</div>
-            <h3 className="gt-modal-title">Start Your Journey</h3>
-            <p className="gt-modal-text">
-              Get certified in Graphic & Web Design. Limited seats — early bird benefits available.
-              Talk to advisor today!
-            </p>
-            <button onClick={closeModal} className="gt-modal-btn">
-              Explore Programs →
-            </button>
-          </div>
-        </div>
-      )} */}
+     
     </>
   );
 };

@@ -101,22 +101,22 @@
   }
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap");
 
 /* ═══════════════════════════
    VARIABLES
 ═══════════════════════════ */
 :root {
-  --faq-accent:   #00c8ff;
-  --faq-accent2:  #0084aa;
-  --faq-bg:       #060810;
-  --faq-surface:  #0c0f1c;
-  --faq-card:     #0f1220;
-  --faq-border:   rgba(0, 200, 255, 0.1);
-  --faq-text:     #c8d4e8;
-  --faq-muted:    #5a6a8a;
-  --faq-white:    #ffffff;
-  --faq-glow:     rgba(0, 200, 255, 0.15);
+  --faq-accent: #00c8ff;
+  --faq-accent2: #0084aa;
+  --faq-bg: #060810;
+  --faq-surface: #0c0f1c;
+  --faq-card: #0f1220;
+  --faq-border: rgba(0, 200, 255, 0.1);
+  --faq-text: #c8d4e8;
+  --faq-muted: #5a6a8a;
+  --faq-white: #ffffff;
+  --faq-glow: rgba(0, 200, 255, 0.15);
 }
 
 /* ═══════════════════════════
@@ -150,14 +150,18 @@
 }
 
 .faq-orb--1 {
-  width: 500px; height: 500px;
-  top: -160px; left: -100px;
+  width: 500px;
+  height: 500px;
+  top: -160px;
+  left: -100px;
   /* background: radial-gradient(circle, rgba(0, 200, 255, 0.055) 0%, transparent 70%); */
 }
 
 .faq-orb--2 {
-  width: 400px; height: 400px;
-  bottom: -100px; right: -80px;
+  width: 400px;
+  height: 400px;
+  bottom: -100px;
+  right: -80px;
   /* background: radial-gradient(circle, rgba(0, 132, 170, 0.05) 0%, transparent 70%); */
 }
 
@@ -199,7 +203,8 @@
 }
 
 .faq-badge-dot {
-  width: 6px; height: 6px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--faq-accent);
   box-shadow: 0 0 8px var(--faq-accent);
@@ -207,8 +212,15 @@
 }
 
 @keyframes faq-pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.35; transform: scale(0.75); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.75);
+  }
 }
 
 .faq-title {
@@ -273,8 +285,14 @@
 }
 
 @keyframes faq-enter {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .faq-item:hover {
@@ -299,9 +317,16 @@
 
 .faq-glow {
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--faq-accent), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--faq-accent),
+    transparent
+  );
   opacity: 0;
   transition: opacity 0.4s ease;
   border-radius: 14px 14px 0 0;
@@ -372,7 +397,10 @@
   border-radius: 8px;
   background: rgba(0, 200, 255, 0.08);
   border: 1px solid rgba(0, 200, 255, 0.15);
-  transition: background 0.25s ease, border-color 0.25s ease, transform 0.35s ease;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.35s ease;
 }
 
 .faq-item--open .faq-icon-wrap {
@@ -385,17 +413,22 @@
   position: absolute;
   background: var(--faq-accent);
   border-radius: 2px;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .faq-icon-h {
-  width: 10px; height: 1.5px;
+  width: 10px;
+  height: 1.5px;
 }
 
 .faq-icon-v {
-  width: 1.5px; height: 10px;
-  transition: transform 0.35s ease, opacity 0.35s ease;
+  width: 1.5px;
+  height: 10px;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
 }
 
 .faq-item--open .faq-icon-v {
@@ -415,11 +448,14 @@
 }
 
 .faq-answer {
-  overflow: hidden;   /* only inner div clips, not the card */
+  overflow: hidden; /* only inner div clips, not the card */
   padding-top: 0;
   border-top: 1px solid transparent;
   margin-top: 0;
-  transition: padding-top 0.38s ease, margin-top 0.38s ease, border-color 0.38s ease;
+  transition:
+    padding-top 0.38s ease,
+    margin-top 0.38s ease,
+    border-color 0.38s ease;
 }
 
 .faq-item--open .faq-answer {
@@ -440,7 +476,8 @@
    CTA CARD
 ═══════════════════════════ */
 .faq-cta-card {
-  background: linear-gradient(135deg,
+  background: linear-gradient(
+    135deg,
     rgba(0, 200, 255, 0.07) 0%,
     rgba(0, 132, 170, 0.04) 100%
   );
@@ -486,7 +523,9 @@
   border-radius: 8px;
   padding: 10px 22px;
   text-decoration: none;
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
   box-shadow: 0 4px 16px rgba(0, 200, 255, 0.25);
 }
 
@@ -507,26 +546,45 @@
     padding: 0 24px;
   }
 
-  .faq-title { font-size: 36px; }
+  .faq-title {
+    font-size: 36px;
+  }
 }
 
 @media (max-width: 576px) {
-  .faq-section { padding: 60px 0 70px; }
+  .faq-section {
+    padding: 60px 0 70px;
+  }
 
-  .faq-container { padding: 0 16px; }
+  .faq-container {
+    padding: 0 16px;
+  }
 
-  .faq-title { font-size: 28px; }
+  .faq-title {
+    font-size: 28px;
+  }
 
-  .faq-subtitle { font-size: 13px; }
+  .faq-subtitle {
+    font-size: 13px;
+  }
 
-  .faq-q-text { font-size: 14px; }
+  .faq-q-text {
+    font-size: 14px;
+  }
 
-  .faq-answer p { font-size: 13px; }
+  .faq-answer p {
+    font-size: 13px;
+  }
 
-  .faq-item { padding: 16px 14px; gap: 12px; }
+  .faq-item {
+    padding: 16px 14px;
+    gap: 12px;
+  }
 
-  .faq-header { margin-bottom: 40px; }
-  
+  .faq-header {
+    margin-bottom: 40px;
+  }
+
   .faq-cta-card {
     margin-top: 32px;
     padding: 20px 16px;

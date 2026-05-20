@@ -174,11 +174,11 @@
 
 // export default GraphicsVideo;
 
-
 import React, { useState } from "react";
 import "./GraphicsVideo.css";
-import Modal from 'react-bootstrap/Modal';
+import Modal from "react-bootstrap/Modal";
 import { IoCloseSharp } from "react-icons/io5";
+import EnrollNowModal from "../EnrollNowModal/EnrollNowModal";
 
 const GraphicsVideo = () => {
   const [graphicsModal, setGraphicsModal] = useState(false);
@@ -232,23 +232,29 @@ const GraphicsVideo = () => {
       <div className="cta-wrapper">
         <div className="cta-card">
           <h2 className="cta-title">
-            Web & Graphic Design Classes in Jaipur{" "}
-            <span className="highlight">!</span>
+            Join the Best Graphic Design Course in Jaipur —{" "}
+            <span className="highlight">Batches are filling fast</span>
           </h2>
           <p className="cta-text">
-            There are numerous industry-accredited tools that are utilised while
-            learning web and graphic design. However, gaining proficiency in all
-            of them isn't necessary Tools added to our web and graphic design
-            classes include
+            Whether you are a classroom learner or want to learn from the
+            comfort of your home, RT Labs delivers both online and offline
+            graphic design courses in Jaipur with flexible batch timings, expert
+            guidance, and placement support assurances. Start today, be one
+            decision away from your creative career.
           </p>
 
           <div className="cta-buttons">
+
             <a href="#" className="btn primary-btn">
-              Join Community
+              Join Our Community
             </a>
-            <a href="#" className="btn outline-btn">
-              Create Tournament
-            </a>
+
+            <EnrollNowModal>
+              <button type="button" className="btn outline-btn">
+                Enrol Now →
+              </button>
+            </EnrollNowModal>
+            
           </div>
         </div>
       </div>

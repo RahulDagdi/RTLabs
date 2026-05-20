@@ -1,0 +1,521 @@
+/* CareerOptions.css */
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=Orbitron:wght@600;700&display=swap");
+
+/* ══════════════════════════════
+   ROOT TOKENS  (matches your theme)
+══════════════════════════════ */
+:root {
+  --co-primary:    #00d4ff;
+  --co-secondary:  #00ff88;
+  --co-yellow:     #f5c518;        /* accent reference only */
+  --co-bg:         #0a0e17;
+  --co-card-bg:    #0f1220;
+  --co-border:     rgba(0, 212, 255, 0.12);
+  --co-border-dim: rgba(0, 212, 255, 0.07);
+  --co-text:       #c8d4e8;
+  --co-muted:      #5a6a8a;
+  --co-white:      #ffffff;
+}
+
+/* ══════════════════════════════
+   SECTION WRAPPER
+══════════════════════════════ */
+.co-section {
+  position: relative;
+  padding: 0 0 0px;
+  overflow: hidden;
+  font-family: "Rajdhani", sans-serif;
+}
+
+/* Grid background */
+.co-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 200, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 200, 255, 0.022) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ambient orbs */
+.co-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+.co-orb--1 {
+  width: 620px; height: 620px;
+  top: -200px; right: -140px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.07) 0%, transparent 70%);
+}
+.co-orb--2 {
+  width: 420px; height: 420px;
+  bottom: 100px; left: -100px;
+  background: radial-gradient(circle, rgba(0, 255, 136, 0.05) 0%, transparent 70%);
+}
+
+/* Container */
+.co-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ══════════════════════════════
+   HEADER
+══════════════════════════════ */
+.co-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+/* Badge */
+.co-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--co-primary);
+  background: rgba(0, 212, 255, 0.07);
+  border: 1px solid rgba(0, 212, 255, 0.22);
+  border-radius: 40px;
+  padding: 6px 18px;
+  margin-bottom: 20px;
+}
+.co-badge-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--co-primary);
+  box-shadow: 0 0 8px var(--co-primary);
+  animation: co-pulse 2s ease-in-out infinite;
+}
+@keyframes co-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.3; transform: scale(0.7); }
+}
+
+.co-title {
+  font-size: clamp(28px, 4.5vw, 50px);
+  font-weight: 700;
+  color: var(--co-white);
+  margin: 0 0 16px;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+}
+.co-title-accent {
+  color: var(--co-primary);
+  text-shadow: 0 0 28px rgba(0, 212, 255, 0.38);
+}
+.co-desc {
+  font-size: 15px;
+  color: white;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+/* ══════════════════════════════
+   4 CAREER CARDS
+══════════════════════════════ */
+.co-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  /* margin-bottom: 80px; */
+}
+
+.co-card {
+  position: relative;
+  background: var(--co-card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 32px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* entrance */
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.co-card.co-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.co-card:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transform: translateY(-8px) !important;
+}
+/* Top glow bar */
+.co-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--co-primary), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.co-card:hover::before { opacity: 1; }
+
+/* Card number */
+.co-card-num {
+  font-family: "Orbitron", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--co-primary);
+  opacity: 0.35;
+  margin-bottom: 16px;
+  transition: opacity 0.25s ease;
+}
+.co-card:hover .co-card-num { opacity: 1; }
+
+.co-card-icon {
+  font-size: 36px;
+  margin-bottom: 16px;
+  display: block;
+  transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.co-card:hover .co-card-icon {
+  transform: scale(1.2) rotate(-6deg);
+}
+
+.co-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--co-white);
+  margin-bottom: 12px;
+  line-height: 1.2;
+  transition: color 0.25s ease;
+}
+.co-card:hover .co-card-title { color: var(--co-primary); }
+
+.co-card-text {
+  font-size: 12.5px;
+  color: white;
+  line-height: 1.88;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  flex: 1;
+  margin-bottom: 20px;
+  transition: color 0.25s ease;
+}
+.co-card:hover .co-card-text { color: var(--co-text); }
+
+.co-card-salary {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0, 212, 255, 0.07);
+  border: 1px solid rgba(0, 212, 255, 0.22);
+  border-radius: 30px;
+  padding: 7px 14px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--co-primary);
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.02em;
+  align-self: flex-start;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+.co-card:hover .co-card-salary {
+  background: rgba(0, 212, 255, 0.14);
+  border-color: rgba(0, 212, 255, 0.45);
+}
+
+
+/* ══════════════════════════════════════════════════════
+   SALARY STRIP
+   — exact layout from image:
+     LEFT: bold label | RIGHT: 2×3 bordered grid
+══════════════════════════════════════════════════════ */
+.co-strip {
+  position: relative;
+  margin-top: 0;
+  /* background: #060c18;                         distinct dark band */
+  overflow: hidden;
+  /* entrance */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.co-strip--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glowing top border line */
+.co-strip-topline {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  /* background:#00aaff; */
+  z-index: 1;
+}
+
+/* Ambient radial glow inside strip */
+.co-strip-glow {
+  position: absolute;
+  inset: 0;
+  /* background: */
+    /* radial-gradient(ellipse at 20% 60%, rgba(0, 212, 255, 0.06) 0%, transparent 55%), */
+    /* radial-gradient(ellipse at 80% 40%, rgba(0, 255, 136, 0.04) 0%, transparent 55%); */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Inner flex row */
+.co-strip-inner {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  padding-top: 64px;
+  padding-bottom: 72px;
+}
+
+/* ── LEFT: Label ── */
+.co-strip-label {
+  flex-shrink: 0;
+  width: 230px;             /* same proportion as image */
+}
+
+.co-strip-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--co-primary);
+  margin: 0 0 10px;
+  opacity: 0.7;
+}
+
+.co-strip-heading {
+  font-family: "Rajdhani", sans-serif;
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 700;
+  color: var(--co-white);
+  line-height: 1.2;
+  margin: 0 0 14px;
+  letter-spacing: 0.01em;
+}
+
+/* Accent underline (yellow underline → cyan gradient) */
+.co-strip-underline {
+  display: block;
+  width: 44px;
+  height: 3px;
+  border-radius: 3px;
+  background: #00aaff;
+  margin-bottom: 16px;
+}
+
+.co-strip-note {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: var(--co-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── RIGHT: 2×3 Grid — EXACT image structure ── */
+.co-sal-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);   /* 3 columns */
+  grid-template-rows: repeat(2, auto);     /* 2 rows */
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Each salary cell */
+.co-sal-cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 28px 16px;
+  text-align: center;
+  background: #080f1e;
+  border-right: 1px solid rgba(0, 212, 255, 0.15);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.15);
+  overflow: hidden;
+  cursor: default;
+  /* entrance */
+  opacity: 0;
+  transform: scale(0.88);
+  transition:
+    opacity 0.42s ease,
+    transform 0.42s ease,
+    background 0.3s ease;
+}
+.co-sal-cell--visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Remove right border — last column */
+.co-sal-cell:nth-child(3n) {
+  border-right: none;
+}
+/* Remove bottom border — last row (cells 4,5,6) */
+.co-sal-cell:nth-child(n+4) {
+  border-bottom: none;
+}
+
+/* Hover */
+.co-sal-cell:hover {
+  background: rgba(0, 212, 255, 0.05);
+}
+.co-sal-cell:hover .co-sal-lpa {
+  text-shadow: 0 0 22px rgba(0, 212, 255, 0.6);
+}
+.co-sal-cell:hover .co-sal-bar {
+  width: 40px;
+  opacity: 1;
+}
+
+/* Top accent bar (on hover) */
+.co-sal-bar {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  border-radius: 0 0 2px 2px;
+  background: linear-gradient(90deg, var(--co-primary), var(--co-secondary));
+  opacity: 0;
+  transition: width 0.35s ease, opacity 0.35s ease;
+}
+
+/* LPA value */
+.co-sal-lpa {
+  font-family: "Orbitron", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--co-white);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  transition: text-shadow 0.3s ease;
+}
+.co-sal-lpa em {
+  font-family: "Rajdhani", sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--co-primary);
+  letter-spacing: 0.06em;
+  margin-left: 2px;
+  opacity: 0.85;
+}
+
+/* Role name */
+.co-sal-role {
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+}
+
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+
+/* 4-col → 2-col cards at 1100px */
+@media (max-width: 1100px) {
+  .co-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .co-strip-inner {
+    gap: 48px;
+  }
+}
+
+/* Tablet: stack strip, salary goes 2-col */
+@media (max-width: 860px) {
+  .co-strip-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+    padding-top: 52px;
+    padding-bottom: 56px;
+  }
+  .co-strip-label {
+    width: 100%;
+  }
+  .co-sal-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);   /* 2 cols on tablet */
+    grid-template-rows: repeat(3, auto);
+  }
+  /* Fix borders for 2-col */
+  .co-sal-cell {
+    border-right: 1px solid rgba(0, 212, 255, 0.15);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.15);
+  }
+  .co-sal-cell:nth-child(3n)  { border-right: 1px solid rgba(0, 212, 255, 0.15); }
+  .co-sal-cell:nth-child(n+4) { border-bottom: 1px solid rgba(0, 212, 255, 0.15); }
+  .co-sal-cell:nth-child(2n)  { border-right: none; }
+  .co-sal-cell:nth-child(n+5) { border-bottom: none; }
+  /* Last row: 5,6 */
+  .co-sal-cell:nth-child(5),
+  .co-sal-cell:nth-child(6) { border-bottom: none; }
+}
+
+/* Mobile: 1-col cards */
+@media (max-width: 680px) {
+  .co-section { padding: 64px 0 0; }
+  .co-container { padding: 0 16px; }
+  .co-cards { grid-template-columns: 1fr; gap: 16px; }
+  .co-card { padding: 26px 18px 22px; }
+  .co-sal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .co-sal-cell { padding: 22px 10px; }
+  .co-sal-lpa { font-size: 18px; }
+  .co-sal-role { font-size: 10px; }
+  .co-strip-inner {
+    padding-top: 40px;
+    padding-bottom: 48px;
+    gap: 28px;
+  }
+  .co-strip-heading { font-size: 24px; }
+}
+
+/* Very small */
+@media (max-width: 380px) {
+  .co-title { font-size: 24px; }
+  .co-sal-lpa { font-size: 15px; }
+  .co-sal-role { font-size: 9.5px; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

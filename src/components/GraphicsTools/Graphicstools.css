@@ -15,7 +15,7 @@
 /* Section Wrapper */
 .gt-section {
   position: relative;
-  padding: 80px 24px;
+  padding:  0 0 70px ;
   /* background: linear-gradient(180deg, #0a0e17 0%, #0f1419 50%, #0a0e17 100%); */
   font-family: "Rajdhani", sans-serif;
   color: var(--gt-text);
@@ -132,7 +132,7 @@
   justify-items: center;
   align-items: start;
   max-width: 1300px;
-  margin: 0 auto 50px;
+  /* margin: 0 auto 50px; */
 }
 
 /* Tool Card */

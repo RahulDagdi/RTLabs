@@ -132,7 +132,7 @@
 ═══════════════════════════ */
 .gr-section {
   position: relative;
-  padding: 90px 0 80px;
+  padding: 0 0 70px;
   /* background: var(--gr-bg); */
   overflow: hidden;
   font-family: "Poppins", sans-serif;

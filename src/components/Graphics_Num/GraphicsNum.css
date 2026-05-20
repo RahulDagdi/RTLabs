@@ -19,7 +19,7 @@
 /* Section Styles */
 .gn-section {
   position: relative;
-  padding: clamp(60px, 10vw, 100px) clamp(16px, 5vw, 24px);
+  padding: 0 0 70px;
   background: #0b0e13;
   font-family: "Rajdhani", sans-serif;
   overflow: hidden;
