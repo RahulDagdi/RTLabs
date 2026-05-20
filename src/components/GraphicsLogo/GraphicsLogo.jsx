@@ -150,7 +150,7 @@ const logos = [
   "/img/graphics-design-course/placement-logo/ssenterpreneurs-logo.png",
   "/img/graphics-design-course/placement-logo/techno-derivation-pvt-limited-logo.png",
   "/img/graphics-design-course/placement-logo/viawork-business-solution-logo.png",
-  "/img/graphics-design-course/placement-logo/Zuvelio-Jewels-education-logo.png",
+  "/img/graphics-design-course/placement-logo/zuvelio-jewels-education-logo.png",
 ];
 
 const GraphicsLogo = () => {
